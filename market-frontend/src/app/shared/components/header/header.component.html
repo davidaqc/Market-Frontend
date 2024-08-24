@@ -1,33 +1,48 @@
-<header class="navbar navbar-expand-lg navbar-light bg-light border-top border-danger border-5">
-    <div class="container">
-      <!-- Logo -->
-      <a class="navbar-brand" href="/">
-        <img src="assets/logo.png" alt="Pequeño Mundo Logo" height="40">
+<header class="navbar navbar-expand-lg navbar-light bg-light border-top border-danger border-5 fixed-top">
+  <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand" href="/">
+      <img src="assets/logo.png" alt="Pequeño Mundo Logo" height="40">
+    </a>
+
+    <!-- Search Bar -->
+    <form class="d-flex flex-grow-1 mx-3" role="search">
+      <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+      <button class="btn btn-danger" type="submit">
+        <i class="fa fa-search"></i>
+      </button>
+    </form>
+
+    <!-- Navbar Items -->
+    <div class="d-flex align-items-center">
+      <a class="nav-link d-flex align-items-center mx-2" href="#" aria-label="Cart">
+        <i class="fa fa-shopping-cart me-2"></i>
+        <div class="d-flex flex-column">
+          <div class="d-flex align-items-center">
+            <span class="badge bg-danger me-2">0</span>
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+          <span class="small">Carrito</span>
+        </div>
       </a>
-  
-      <!-- Search Bar -->
-      <form class="d-flex ms-auto me-3" role="search">
-        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-        <button class="btn btn-outline-danger" type="submit">
-          <i class="fa fa-search"></i>
-        </button>
-      </form>
-  
-      <!-- Navbar Items -->
-      <div class="d-flex align-items-center">
-        <a class="btn btn-outline-danger me-2 d-flex align-items-center" href="#" aria-label="Cart">
-          <i class="fa fa-shopping-cart me-1"></i>
-          <span>Carrito</span>
-        </a>
-        <a class="btn btn-outline-danger me-2" href="#" aria-label="Wishlist">
-          <i class="fa fa-heart"></i>
-        </a>
-        <a class="btn btn-outline-danger me-2" href="#" aria-label="User Account">
-          <i class="fa fa-user"></i>
-        </a>
-        <a class="btn btn-danger" href="#" aria-label="Register">
-          Register
-        </a>
-      </div>
+      <a class="nav-link d-flex align-items-center mx-2" href="#" aria-label="Wishlist">
+        <i class="fa fa-heart me-2"></i>
+        <div class="d-flex flex-column">
+          <span class="small">Lista de</span>
+          <span class="small">Deseos</span>
+        </div>
+      </a>
+      <a class="nav-link d-flex align-items-center mx-2" href="#" aria-label="User Account">
+        <i class="fa fa-user me-2"></i>
+        <div class="d-flex flex-column">
+          <span class="small">Mi Pequeño</span>
+          <span class="small">Mundo</span>
+        </div>
+      </a>
+      <span class="separator">|</span>
+      <a class="nav-link mx-2" href="#" aria-label="Register">
+        <span class="small">Regístrate</span>
+      </a>
     </div>
+  </div>
 </header>

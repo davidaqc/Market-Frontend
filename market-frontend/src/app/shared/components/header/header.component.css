@@ -1,0 +1,26 @@
+.navbar .nav-link {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar .nav-link:hover {
+    background-color: #f8f9fa;
+    color: #dc3545;
+}
+
+.navbar .nav-link .badge {
+    margin-right: 0.5rem;
+}
+
+.navbar .nav-link i {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+}
+
+.navbar .nav-link .small {
+    line-height: 1.2;
+}
+
+.separator {
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+}
