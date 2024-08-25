@@ -1,0 +1,13 @@
+.category-carousel {
+    overflow: hidden;
+    width: 100%;
+}
+
+.category-item img {
+    width: 100px;
+    height: 100px;
+}
+  
+.category-item p {
+    font-size: 0.9rem;
+}
