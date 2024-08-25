@@ -5,6 +5,11 @@
       <img src="assets/logo.png" alt="Pequeño Mundo Logo" height="40">
     </a>
 
+    <!-- Offcanvas Trigger Button - visible only on smaller screens -->
+    <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
     <!-- Search Bar -->
     <form class="d-flex flex-grow-1 mx-3" role="search">
       <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
@@ -13,8 +18,8 @@
       </button>
     </form>
 
-    <!-- Navbar Items -->
-    <div class="d-flex align-items-center">
+    <!-- Navbar Items - visible only on larger screens -->
+    <div class="d-none d-lg-flex align-items-center">
       <a class="nav-link d-flex align-items-center mx-2" href="#" aria-label="Cart">
         <i class="fa fa-shopping-cart me-2"></i>
         <div class="d-flex flex-column">

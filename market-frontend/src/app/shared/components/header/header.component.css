@@ -24,3 +24,11 @@
     margin: 0 0.5rem;
     font-size: 1.2rem;
 }
+
+.custom-toggler {
+    border: none;
+}
+
+.custom-toggler:focus {
+    box-shadow: none;
+}
