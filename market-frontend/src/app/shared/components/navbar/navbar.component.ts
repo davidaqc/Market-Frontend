@@ -63,12 +63,12 @@ export class NavbarComponent {
           "Subcategory 1", "Subcategory 2"
       ]
   },
-  {
-      name: 'MI NEGOCIO LIMPIO',
-      subcategories: [
-          "Subcategory 1", "Subcategory 2", "Subcategory 3"
-      ]
-  }
+  // {
+  //     name: 'MI NEGOCIO LIMPIO',
+  //     subcategories: [
+  //         "Subcategory 1", "Subcategory 2", "Subcategory 3"
+  //     ]
+  // }
   ];
 
   activeCategory: any = null;
