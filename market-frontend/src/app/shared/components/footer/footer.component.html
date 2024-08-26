@@ -1,58 +1,65 @@
-<footer class="bg-dark text-light pt-4">
-    <div class="container">
-      <div class="row">
-        <!-- Contact Information -->
-        <div class="col-md-4">
-          <h5 class="text-uppercase">Información de Contacto</h5>
-          <p>TELÉFONO<br> +506 2208-2800 opción 2</p>
-          <p>WHATSAPP<br> +506 7005-7500</p>
-          <p [innerHTML]="'CORREO ELECTRÓNICO<br> pequenomundo@pequenomundo.com'"> </p>
-          <div class="social-icons mt-2">
-            <a href="#" class="me-2">
-              <i class="fab fa-facebook fa-2x"></i>
-            </a>
-            <a href="#">
-              <i class="fab fa-instagram fa-2x"></i>
-            </a>
-          </div>
+<footer class="bg-dark text-light py-4">
+  <div class="container pt-4">
+    <div class="row">
+      <!-- Contact Information -->
+      <div class="col-md-3">
+        <h5>INFORMACIÓN DE CONTACTO</h5>
+        <div class="contact-info">
+          <p class="mb-0">TELÉFONO<br>+506 2208-2800 opción 2</p>
+          <p class="mb-0">WHATSAPP<br>+506 7005-7500</p>
+          <p class="mb-0">CORREO ELECTRÓNICO <a href="mailto:pequenomundo@pequenomundo.com" class="text-light">pequenomundo&#64;pequenomundo.com</a></p>
         </div>
-  
-        <!-- Newsletter -->
-        <div class="col-md-4">
-          <h5 class="text-uppercase">Sé el Primero en Saberlo</h5>
-          <p>Obtén toda la información sobre las últimas novedades.<br>Regístrate para recibir el boletín.</p>
-          <div class="input-group">
-            <input type="email" class="form-control" placeholder="Correo Electrónico">
-            <button class="btn btn-danger" type="button">Suscribirse</button>
-          </div>
-        </div>
-  
-        <!-- My Account -->
-        <div class="col-md-4">
-          <h5 class="text-uppercase">Mi Cuenta</h5>
-          <ul class="list-unstyled">
-            <li><a href="#" class="text-light">Sobre nosotros</a></li>
-            <li><a href="#" class="text-light">Contáctanos</a></li>
-            <li><a href="#" class="text-light">Preguntas frecuentes</a></li>
-            <li><a href="#" class="text-light">Mi Pequeño Mundo</a></li>
-            <li><a href="#" class="text-light">Empleo</a></li>
-            <li><a href="#" class="text-light">Historial de pedidos</a></li>
-            <li><a href="#" class="text-light">Búsqueda avanzada</a></li>
-            <li><a href="#" class="text-light">Iniciar Sesión</a></li>
-          </ul>
+        <div class="social-icons mt-3">
+          <a href="#" class="text-light me-4"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-light"><i class="fab fa-instagram"></i></a>
         </div>
       </div>
-  
-      <div class="row mt-4">
-        <div class="col-md-6">
-          <p class="mb-0">Todos los derechos reservados © PEQUEÑO MUNDO 2024.</p>
-        </div>
-        <div class="col-md-6 text-end">
-          <a href="#" class="text-light">Términos y condiciones</a>
-          <img src="assets/images/pm-payment-logos.png" alt="BAC" class="ms-2 payment-logo">
+
+      <!-- Newsletter Signup and My Account -->
+      <div class="col-md-5">
+        <h5>SÉ EL PRIMERO EN SABERLO</h5>
+        <p>Obtené toda la información sobre las últimas novedades.<br>Registrate para recibir el boletín.</p>
+        <hr>
+        <h5>MI CUENTA</h5>
+        <div class="row">
+          <div class="col-6">
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-light">Sobre nosotros</a></li>
+              <li><a href="#" class="text-light">Contactanos</a></li>
+              <li><a href="#" class="text-light">Preguntas frecuentes</a></li>
+              <li><a href="#" class="text-light">Mi Pequeño Mundo</a></li>
+              <li><a href="#" class="text-light">Empleo</a></li>
+            </ul>
+          </div>
+          <div class="col-6">
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-light">Historial de pedidos</a></li>
+              <li><a href="#" class="text-light">Búsqueda avanzada</a></li>
+              <li><a href="#" class="text-light">Iniciar Sesión</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-      
+
+      <!-- Form Column -->
+      <div class="col-md-4">
+        <form class="d-flex">
+          <input type="email" class="form-control" placeholder="Correo Electrónico">
+          <button type="submit" class="btn btn-danger">Suscribirse</button>
+        </form>
+      </div>
     </div>
+
+    <!-- Copyright and Payment Methods -->
+    <hr class="my-4">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <p class="mb-0">Todos los derechos reservados © PEQUEÑO MUNDO 2024.</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <a href="#" class="text-light me-3">Términos y condiciones</a>
+        <img src="assets/images/pm-payment-logos.png" alt="BAC" class="me-2" height="30">
+      </div>
+    </div>
+  </div>
 </footer>
-  
