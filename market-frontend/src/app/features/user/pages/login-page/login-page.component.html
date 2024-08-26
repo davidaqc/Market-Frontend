@@ -1,0 +1,32 @@
+<div class="container py-5">
+    <h2 class="mb-4">Acceso del cliente</h2>
+    <div class="border-top border-danger border-3"></div>
+    
+    <div class="row px-5 py-3">
+      <div class="col-md-6">
+        <h5 class="text-danger pb-3">CLIENTES REGISTRADOS</h5>
+        <p>Si tiene una cuenta, inicie sesión con su dirección de correo electrónico.</p>
+        <form >
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo electrónico *</label>
+            <input type="email" class="form-control" id="email" formControlName="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Contraseña *</label>
+            <input type="password" class="form-control" id="password" formControlName="password" required>
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="rememberMe" formControlName="rememberMe">
+            <label class="form-check-label" for="rememberMe">Recordarme</label>
+          </div>
+          <button type="submit" class="btn btn-danger">Iniciar sesión</button>
+          <a href="#" class="ms-3 text-danger">¿Olvidaste tu contraseña?</a>
+        </form>
+      </div>
+      <div class="col-md-6">
+        <h5 class="text-danger pb-3">NUEVOS CLIENTES</h5>
+        <p>Crear una cuenta tiene muchos beneficios: Paga más rápido, puede guardar más de una dirección, seguimiento de pedidos y mucho más.</p>
+        <button class="btn btn-danger">Crear una Cuenta</button>
+      </div>
+    </div>
+</div>
