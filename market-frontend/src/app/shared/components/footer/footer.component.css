@@ -2,24 +2,24 @@ footer {
     font-size: 0.9rem;
 }
 
-.social-icons i {
-    color: #fff;
+footer h5 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
 }
 
-.social-icons a {
+footer .social-icons a {
+    font-size: 1.2rem;
+}
+
+footer hr {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+footer a {
     text-decoration: none;
 }
 
-.input-group .form-control {
-    border-radius: 0;
-}
-
-.input-group .btn {
-    border-radius: 0;
-}
-
-.payment-logo {
-    width: 200px;
-    height: auto;
-    vertical-align: middle;
+footer a:hover {
+    text-decoration: underline;
 }
