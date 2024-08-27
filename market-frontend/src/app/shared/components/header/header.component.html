@@ -1,15 +1,18 @@
-<header class="navbar navbar-expand-md navbar-light bg-light border-top border-danger border-5">
-  <div class="container">
-
-    <!-- Offcanvas Trigger Button - visible only on smaller screens -->
-    <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Logo -->
-    <a class="navbar-brand" href="/">
-      <img src="assets/logo.png" alt="Pequeño Mundo Logo" height="40">
-    </a>
+<header class="navbar navbar-expand-md navbar-light bg-light border-top border-danger border-5 fixed-top">
+  <div class="container-md">
+    <div class="d-flex align-items-center flex-grow-1">
+      <!-- Offcanvas Trigger Button - visible only on smaller screens -->
+      <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <!-- Logo - centered with flex -->
+      <div class="flex-grow-1 d-flex justify-content-center">
+        <a class="navbar-brand" href="/">
+          <img src="assets/logo.png" alt="Pequeño Mundo Logo" height="40">
+        </a>
+      </div>
+    </div>
 
     <!-- Search Bar -->
     <form class="d-flex flex-grow-1 mx-3" role="search">

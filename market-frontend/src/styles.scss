@@ -1,5 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 
+body {
+    padding-top: 72px; /* Required for "fixed-top" to work. */
+}
+
 /* Customize Bootstrap Styles */
 .form-control, .form-check-input {
     border: 1px solid #ccc;
