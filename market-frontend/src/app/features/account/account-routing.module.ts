@@ -1,7 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { AccountLayoutComponent } from './layout/account-layout/account-layout.component';
+import { MyAccountPageComponent } from './pages/my-account-page/my-account-page.component';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: AccountLayoutComponent,
+    children: [
+      { path: '', redirectTo: 'mi-cuenta', pathMatch: 'full' },
+      { path: 'mi-cuenta', component: MyAccountPageComponent },
+    ]
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
