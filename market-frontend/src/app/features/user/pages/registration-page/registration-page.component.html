@@ -1,49 +1,54 @@
-<div class="container">
-    <h2 class="mb-4">Crear nueva cuenta de cliente</h2>
-    <div class="border-top border-danger border-3"></div>
-    <!-- <form (ngSubmit)="onSubmit()" [formGroup]="registrationForm"> -->
-    <form class="px-5 py-3">
-      <div class="row">
-        <div class="col-md-6">
-          <h5 class="text-danger pb-3">INFORMACIÓN PERSONAL</h5>
-          <div class="mb-3">
-            <label for="nombre" class="form-label">Nombre *</label>
-            <input type="text" class="form-control" id="nombre" formControlName="nombre" required>
-          </div>
-          <div class="mb-3">
-            <label for="apellido" class="form-label">Apellido *</label>
-            <input type="text" class="form-control" id="apellido" formControlName="apellido" required>
-          </div>
-          <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="suscribirse" formControlName="suscribirse">
-            <label class="form-check-label" for="suscribirse">Suscribirse al boletín de noticias</label>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <h5 class="text-danger pb-3">INFORMACIÓN DE INICIO DE SESIÓN</h5>
-          <div class="mb-3">
-            <label for="email" class="form-label">Correo electrónico *</label>
-            <input type="email" class="form-control" id="email" formControlName="email" required>
-          </div>
-          <div class="mb-3">
-            <label for="password" class="form-label">Contraseña *</label>
-            <input type="password" class="form-control" id="password" formControlName="password" required>
-            <small class="form-text text-muted">Fuerza de la contraseña: Sin contraseña</small>
-          </div>
-          <div class="mb-3">
-            <label for="confirmPassword" class="form-label">Confirmar contraseña *</label>
-            <input type="password" class="form-control" id="confirmPassword" formControlName="confirmPassword" required>
-          </div>
-          <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="recordarme" formControlName="recordarme">
-            <label class="form-check-label" for="recordarme">Recordarme</label>
-          </div>
-          <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="aceptarPolitica" formControlName="aceptarPolitica" required>
-            <label class="form-check-label" for="aceptarPolitica">Aceptación de política de datos.</label>
-          </div>
-        </div>
+<div class="container-fluid container-md">
+  <div class="row">
+      <div class="col-12">
+          <h2 class="mb-4">Crear nueva cuenta de cliente</h2>
+          <hr class="border-danger border-3 opacity-75 mb-4">
+          <form class="mx-3">
+              <div class="row">
+                  <div class="col-12 col-md-6 mb-4">
+                      <h5 class="text-danger pb-3">INFORMACIÓN PERSONAL</h5>
+                      <div class="mb-3">
+                          <label for="nombre" class="form-label">Nombre *</label>
+                          <input type="text" class="form-control" id="nombre" required>
+                      </div>
+                      <div class="mb-3">
+                          <label for="apellido" class="form-label">Apellido *</label>
+                          <input type="text" class="form-control" id="apellido" required>
+                      </div>
+                      <div class="mb-3 form-check">
+                          <input type="checkbox" class="form-check-input" id="suscribirse">
+                          <label class="form-check-label" for="suscribirse">Suscribirse al boletín de noticias</label>
+                      </div>
+                  </div>
+                  <div class="col-12 col-md-6 mb-4">
+                      <h5 class="text-danger pb-3">INFORMACIÓN DE INICIO DE SESIÓN</h5>
+                      <div class="mb-3">
+                          <label for="email" class="form-label">Correo electrónico *</label>
+                          <input type="email" class="form-control" id="email" required>
+                      </div>
+                      <div class="mb-3">
+                          <label for="password" class="form-label">Contraseña *</label>
+                          <input type="password" class="form-control" id="password" required>
+                          <small class="form-text text-muted">Fuerza de la contraseña: Sin contraseña</small>
+                      </div>
+                      <div class="mb-3">
+                          <label for="confirmPassword" class="form-label">Confirmar contraseña *</label>
+                          <input type="password" class="form-control" id="confirmPassword" required>
+                      </div>
+                      <div class="mb-3 form-check">
+                          <input type="checkbox" class="form-check-input" id="recordarme">
+                          <label class="form-check-label" for="recordarme">Recordarme</label>
+                      </div>
+                      <div class="mb-3 form-check">
+                          <input type="checkbox" class="form-check-input" id="aceptarPolitica" required>
+                          <label class="form-check-label" for="aceptarPolitica">Aceptación de política de datos.</label>
+                      </div>
+                  </div>
+              </div>
+              <div class="mt-4">
+                  <button type="submit" class="btn btn-danger">Crear una Cuenta</button>
+              </div>
+          </form>
       </div>
-      <button type="submit" class="btn btn-danger">Crear una Cuenta</button>
-    </form>
+  </div>
 </div>
