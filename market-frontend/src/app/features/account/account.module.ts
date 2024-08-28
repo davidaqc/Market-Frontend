@@ -2,14 +2,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { AccountRoutingModule } from './account-routing.module';
-import { MyAccountComponent } from './pages/my-account/my-account.component';
 import { AccountLayoutComponent } from './layout/account-layout/account-layout.component';
+import { MyAccountPageComponent } from './pages/my-account-page/my-account-page.component';
 
 
 @NgModule({
   declarations: [
-    MyAccountComponent,
-    AccountLayoutComponent
+    AccountLayoutComponent,
+    MyAccountPageComponent
   ],
   imports: [
     CommonModule,
