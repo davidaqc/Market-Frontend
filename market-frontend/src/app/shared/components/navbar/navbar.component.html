@@ -1,12 +1,10 @@
 <div (mouseleave)="clearActiveCategory()">
-
   <!-- Navigation Bar -->
   <nav class="navbar navbar-expand-md navbar-light bg-light d-none d-md-block">
-    <div class="container">
-      <ul class="navbar-nav w-100">
-        <li class="nav-item" *ngFor="let category of categories"
-            (mouseover)="setActiveCategory(category)">
-          <a class="nav-link" [class.active]="category === activeCategory">
+    <div class="container-md">
+      <ul class="navbar-nav d-flex flex-wrap w-100">
+        <li class="nav-item" *ngFor="let category of categories" (mouseover)="setActiveCategory(category)" class="nav-item-wrapper">
+          <a class="nav-link text-uppercase fw-bold px-3 py-2" [class.active]="category === activeCategory">
             {{ category.name }}
           </a>
         </li>
@@ -14,12 +12,12 @@
     </div>
   </nav>
 
-  <!-- Logo -->
-  <div class="subcategories-wrapper" *ngIf="activeCategory">
-    <div class="subcategories-container">
-      <div class="row g-0">
-        <div class="col-3" *ngFor="let subcategory of activeCategory.subcategories">
-          <a href="#" class="subcategory-link">{{ subcategory }}</a>
+  <!-- Subcategories -->
+  <div class="subcategories-wrapper position-absolute w-100" *ngIf="activeCategory">
+    <div class="container">
+      <div class="row bg-white shadow-sm p-3">
+        <div class="col-3 g-3" *ngFor="let subcategory of activeCategory.subcategories">
+          <a href="#" class="text-decoration-none text-dark">{{ subcategory }}</a>
         </div>
       </div>
     </div>

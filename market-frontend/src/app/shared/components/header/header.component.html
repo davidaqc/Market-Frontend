@@ -1,15 +1,18 @@
-<header class="navbar navbar-expand-md navbar-light bg-light border-top border-danger border-5">
-  <div class="container">
-
-    <!-- Offcanvas Trigger Button - visible only on smaller screens -->
-    <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Logo -->
-    <a class="navbar-brand" href="/">
-      <img src="assets/logo.png" alt="Pequeño Mundo Logo" height="40">
-    </a>
+<header class="navbar navbar-expand-md navbar-light bg-light border-top border-danger border-5 ">
+  <div class="container-md">
+    <div class="d-flex align-items-center flex-grow-1">
+      <!-- Offcanvas Trigger Button - visible only on smaller screens -->
+      <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <!-- Logo - centered with flex -->
+      <div class="flex-grow-1 d-flex justify-content-center">
+        <a class="navbar-brand" href="/">
+          <img src="assets/logo.png" alt="Pequeño Mundo Logo" class="img-fluid mb-2">
+        </a>
+      </div>
+    </div>
 
     <!-- Search Bar -->
     <form class="d-flex flex-grow-1 mx-3" role="search">
@@ -21,7 +24,7 @@
 
     <!-- Navbar Items - visible only on larger screens -->
     <div class="d-none d-lg-flex align-items-center">
-      <a class="nav-link d-flex align-items-center mx-2" href="#" aria-label="Cart">
+      <a class="nav-link d-flex align-items-center mx-2" href="customer/account/newpassword" aria-label="Cart">
         <i class="fa fa-shopping-cart me-2"></i>
         <div class="d-flex flex-column">
           <div class="d-flex align-items-center">
@@ -34,15 +37,15 @@
       <a class="nav-link d-flex align-items-center mx-2" href="#" aria-label="Wishlist">
         <i class="fa fa-heart me-2"></i>
         <div class="d-flex flex-column">
-          <span class="small">Lista de</span>
-          <span class="small">Deseos</span>
+          <span class="small text-nowrap">Lista de</span>
+          <span class="small text-nowrap">Deseos</span>
         </div>
       </a>
       <a class="nav-link d-flex align-items-center mx-2" href="customer/account/login" aria-label="User Account">
         <i class="fa fa-user me-2"></i>
         <div class="d-flex flex-column">
-          <span class="small">Mi Pequeño</span>
-          <span class="small">Mundo</span>
+          <span class="small text-nowrap">Mi Pequeño</span>
+          <span class="small text-nowrap">Mundo</span>
         </div>
       </a>
       <a class="nav-link mx-2" href="customer/account/register" aria-label="Register">
