@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+    --primary-color: #dc3545; /* Bootstrap danger color */
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.custom-border {
+    border: 1px solid #dee2e6;
+    border-top: 4px solid var(--primary-color);
+    padding: 20px;
+    border-radius: 0.25rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Customize Bootstrap Styles */
+.form-control, .form-check-input {
+    border: 1px solid #6b7a83;
+}
+
+form {
+    font-size: 0.9rem;
+}
+
+form h5 {
+    font-size: 1rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
