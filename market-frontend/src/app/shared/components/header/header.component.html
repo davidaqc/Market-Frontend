@@ -8,7 +8,7 @@
       
       <!-- Logo - centered with flex -->
       <div class="flex-grow-1 d-flex justify-content-center">
-        <a class="navbar-brand" href="/">
+        <a class="navbar-brand" routerLink="/">
           <img src="assets/logo.png" alt="Pequeño Mundo Logo" class="img-fluid mb-2">
         </a>
       </div>
@@ -24,7 +24,7 @@
 
     <!-- Navbar Items - visible only on larger screens -->
     <div class="d-none d-lg-flex align-items-center">
-      <a class="nav-link d-flex align-items-center mx-2" href="customer/account/newpassword" aria-label="Cart">
+      <a class="nav-link d-flex align-items-center mx-2" routerLink="user/newpassword" aria-label="Cart">
         <i class="fa fa-shopping-cart me-2"></i>
         <div class="d-flex flex-column">
           <div class="d-flex align-items-center">
@@ -34,21 +34,21 @@
           <span class="small">Carrito</span>
         </div>
       </a>
-      <a class="nav-link d-flex align-items-center mx-2" href="#" aria-label="Wishlist">
+      <a class="nav-link d-flex align-items-center mx-2" routerLink="#" aria-label="Wishlist">
         <i class="fa fa-heart me-2"></i>
         <div class="d-flex flex-column">
           <span class="small text-nowrap">Lista de</span>
           <span class="small text-nowrap">Deseos</span>
         </div>
       </a>
-      <a class="nav-link d-flex align-items-center mx-2" href="customer/account/login" aria-label="User Account">
+      <a class="nav-link d-flex align-items-center mx-2" routerLink="user/login" aria-label="User Account">
         <i class="fa fa-user me-2"></i>
         <div class="d-flex flex-column">
           <span class="small text-nowrap">Mi Pequeño</span>
           <span class="small text-nowrap">Mundo</span>
         </div>
       </a>
-      <a class="nav-link mx-2" href="customer/account/register" aria-label="Register">
+      <a class="nav-link mx-2" routerLink="user/register" aria-label="Register">
         <span class="me-2">|</span>
         <span class="small">Regístrate</span>
       </a>
@@ -56,16 +56,16 @@
 
     <!-- Navbar Items - visible only on medium screens -->
     <div class="d-none d-md-flex d-lg-none align-items-center">
-      <a class="nav-link d-flex align-items-center mx-2" href="#" aria-label="Cart">
+      <a class="nav-link d-flex align-items-center mx-2" routerLink="#" aria-label="Cart">
         <i class="fa fa-shopping-cart me-2"></i>
       </a>
-      <a class="nav-link d-flex align-items-center mx-2" href="#" aria-label="Wishlist">
+      <a class="nav-link d-flex align-items-center mx-2" routerLink="#" aria-label="Wishlist">
         <i class="fa fa-heart me-2"></i>
       </a>
-      <a class="nav-link d-flex align-items-center mx-2" href="#" aria-label="User Account">
+      <a class="nav-link d-flex align-items-center mx-2" routerLink="#" aria-label="User Account">
         <i class="fa fa-user me-2"></i>
       </a>
-      <a class="nav-link mx-2" href="#" aria-label="Register">
+      <a class="nav-link mx-2" routerLink="#" aria-label="Register">
         <span class="me-2">|</span>
         <span class="small">Regístrate</span>
       </a>
