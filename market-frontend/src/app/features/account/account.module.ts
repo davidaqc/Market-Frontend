@@ -6,13 +6,15 @@ import { AccountRoutingModule } from './account-routing.module';
 import { AccountLayoutComponent } from './layout/account-layout/account-layout.component';
 import { MyAccountPageComponent } from './pages/my-account-page/my-account-page.component';
 import { AccountInfoPageComponent } from './pages/account-info-page/account-info-page.component';
+import { GdprPageComponent } from './pages/gdpr-page/gdpr-page.component';
 
 
 @NgModule({
   declarations: [
     AccountLayoutComponent,
     MyAccountPageComponent,
-    AccountInfoPageComponent
+    AccountInfoPageComponent,
+    GdprPageComponent
   ],
   imports: [
     CommonModule,
