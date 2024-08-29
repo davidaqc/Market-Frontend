@@ -1,22 +1,49 @@
 <div class="container-fluid container-md">
     <h2 class="mb-4">Mi Cuenta</h2>
     <div class="row">
-        <div class="col-md-3">
-            <div class="list-group">
-                <a routerLink="./mi-cuenta" class="list-group-item list-group-item-action">Mi Cuenta</a>
-                <a href="#" class="list-group-item list-group-item-action disabled">Mis pedidos</a>
-                <a href="#" class="list-group-item list-group-item-action disabled">Mis productos descargables</a>
-                <a href="#" class="list-group-item list-group-item-action disabled">Mi lista de deseos</a>
-                <a href="#" class="list-group-item list-group-item-action disabled">Libreta de direcciones</a>
-                <a routerLink="./edit" class="list-group-item list-group-item-action">Información de la cuenta</a>
-                <a href="#" class="list-group-item list-group-item-action disabled">Métodos de pago almacenados</a>
-                <a href="#" class="list-group-item list-group-item-action disabled">GDPR</a>
-                <a href="#" class="list-group-item list-group-item-action disabled">Reseñas de mi artículo</a>
-                <a href="#" class="list-group-item list-group-item-action disabled">Suscripciones al boletín informativo</a>
+      <!-- Define the links in a template -->
+      <ng-template #menuLinks>
+        <div class="list-group">
+          <a routerLink="./mi-cuenta" class="list-group-item list-group-item-action">Mi Cuenta</a>
+          <a href="#" class="list-group-item list-group-item-action disabled">Mis pedidos</a>
+          <a href="#" class="list-group-item list-group-item-action disabled">Mis productos descargables</a>
+          <a href="#" class="list-group-item list-group-item-action disabled">Mi lista de deseos</a>
+          <a href="#" class="list-group-item list-group-item-action disabled">Libreta de direcciones</a>
+          <a routerLink="./edit" class="list-group-item list-group-item-action">Información de la cuenta</a>
+          <a href="#" class="list-group-item list-group-item-action disabled">Métodos de pago almacenados</a>
+          <a href="#" class="list-group-item list-group-item-action disabled">GDPR</a>
+          <a href="#" class="list-group-item list-group-item-action disabled">Reseñas de mi artículo</a>
+          <a href="#" class="list-group-item list-group-item-action disabled">Suscripciones al boletín informativo</a>
+        </div>
+      </ng-template>
+  
+      <!-- Accordion for small screens -->
+      <div class="col-12 d-md-none">
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Menú
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <ng-container *ngTemplateOutlet="menuLinks"></ng-container>
+              </div>
             </div>
+          </div>
         </div>
-        <div class="col-md-9">
-            <router-outlet></router-outlet>
-        </div>
+      </div>
+  
+      <!-- Regular menu for medium and larger screens -->
+      <div class="col-12 d-none d-md-block col-md-3">
+        <ng-container *ngTemplateOutlet="menuLinks"></ng-container>
+      </div>
+  
+      <!-- Content area -->
+      <div class="col-12 col-md-9">
+        <router-outlet></router-outlet>
+      </div>
     </div>
-</div>
+  </div>
+  
