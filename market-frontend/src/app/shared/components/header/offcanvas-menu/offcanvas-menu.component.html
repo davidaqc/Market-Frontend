@@ -1,0 +1,36 @@
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+    <div class="offcanvas-body p-0">
+      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="pills-menu-tab" data-bs-toggle="pill" data-bs-target="#pills-menu" role="tab" aria-controls="pills-menu" aria-selected="true">Menú</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="pills-account-tab" data-bs-toggle="pill" data-bs-target="#pills-account" role="tab" aria-controls="pills-account" aria-selected="false">Cuenta</a>
+        </li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane fade show active" id="pills-menu" role="tabpanel" aria-labelledby="pills-menu-tab">
+          <div class="accordion" id="menuAccordion">
+            <div class="accordion-item border-0" *ngFor="let category of categories">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" [attr.data-bs-toggle]="'collapse'" [attr.data-bs-target]="'#' + category.id">
+                  {{ category.name }}
+                </button>
+              </h2>
+              <div [id]="category.id" class="accordion-collapse collapse" data-bs-parent="#menuAccordion">
+                <div class="accordion-body">
+                  <a href="#" class="nav-link" *ngFor="let subcategory of category.subcategories">{{ subcategory }}</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="pills-account" role="tabpanel" aria-labelledby="pills-account-tab">
+          <div class="d-flex flex-column">
+            <a href="#" class="nav-link">MI PEQUEÑO MUNDO</a>
+            <a href="#" class="nav-link">SALIR</a>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+.nav-link {
+    color: #000;
+    border-radius: 0;
+    padding: 0.5rem 1.25rem;
+}
+
+.nav-link.active {
+    background-color: var(--bs-danger);
+    color: #fff;
+}
+
+.accordion-button {
+    padding: 0.5rem 1.25rem;
+}
+
+.accordion-button:not(.collapsed) {
+    color: inherit;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.accordion-body {
+    padding: 0.5rem 1.25rem;
+}
+
+@media (max-width: 767px) {
+    .offcanvas-start {
+      width: 75%;
+    }
+}
