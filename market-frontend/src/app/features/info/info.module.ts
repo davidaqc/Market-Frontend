@@ -4,12 +4,14 @@ import { CommonModule } from '@angular/common';
 import { InfoRoutingModule } from './info-routing.module';
 import { FaqPageComponent } from './pages/faq-page/faq-page.component';
 import { ContactUsPageComponent } from './pages/contact-us-page/contact-us-page.component';
+import { AboutUsPageComponent } from './pages/about-us-page/about-us-page.component';
 
 
 @NgModule({
   declarations: [
     FaqPageComponent,
-    ContactUsPageComponent
+    ContactUsPageComponent,
+    AboutUsPageComponent
   ],
   imports: [
     CommonModule,
