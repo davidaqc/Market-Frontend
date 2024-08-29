@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AccountLayoutComponent } from './layout/account-layout/account-layout.component';
 import { MyAccountPageComponent } from './pages/my-account-page/my-account-page.component';
+import { AccountInfoPageComponent } from './pages/account-info-page/account-info-page.component';
 
 const routes: Routes = [
   {
@@ -11,6 +12,7 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'mi-cuenta', pathMatch: 'full' },
       { path: 'mi-cuenta', component: MyAccountPageComponent },
+      { path: 'edit', component: AccountInfoPageComponent },
     ]
   }
 ];
