@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AccountInfoPageComponent {
 
+  nombre: string = 'David';
+  apellido: string = 'Quesada';
+  correo: string = 'davidqc05@gmail.com';
+  cambiarCorreo: boolean = false;
+  cambiarContrasena: boolean = false;
 }

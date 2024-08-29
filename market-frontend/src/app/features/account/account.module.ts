@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { AccountRoutingModule } from './account-routing.module';
 import { AccountLayoutComponent } from './layout/account-layout/account-layout.component';
@@ -15,6 +16,7 @@ import { AccountInfoPageComponent } from './pages/account-info-page/account-info
   ],
   imports: [
     CommonModule,
+    FormsModule,
     AccountRoutingModule
   ]
 })
