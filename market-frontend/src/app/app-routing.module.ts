@@ -10,6 +10,8 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
+    onSameUrlNavigation: "ignore",
+    anchorScrolling: "enabled",
     scrollPositionRestoration: 'enabled', // This will scroll to top on route change
   })],
   exports: [RouterModule]

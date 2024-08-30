@@ -1,0 +1,33 @@
+p, h2, li, h3, th, td, h4 {
+    color: #7b858a;
+}
+
+h1 {
+    color: #4a4a4a;
+}
+
+// h2 {
+//     font-weight: bold;
+// }
+
+.custom-hr {
+    border: 2px solid #4a4a4a;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.nav {
+    color: #7b858a; 
+}
+
+.nav a:hover{
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.nav a i {
+    font-size: 0.5rem;
+}
