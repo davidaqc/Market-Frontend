@@ -1,0 +1,87 @@
+<div class="container-fluid container-md mt-3">
+    <h2>Carrito de Compras</h2>
+    <div class="row">
+      <!-- Product List -->
+      <div class="col-12 col-lg-8 mb-3">
+        <div class="card">
+          <div class="card-body">
+            <div class="row mb-3 font-weight-bold d-none d-md-flex">
+              <div class="col-1"></div>
+              <div class="col-2">Artículo</div>
+              <div class="col-3">Nombre</div>
+              <div class="col-2">Precio</div>
+              <div class="col-2">Cantidad</div>
+              <div class="col-2">Subtotal</div>
+            </div>
+            <ng-container *ngFor="let product of products; let last = last">
+              <div class="row mb-3 align-items-center">
+                <div class="col-12 col-md-1 mb-2 mb-md-0 d-flex justify-content-between align-items-center">
+                  <button class="btn btn-sm btn-link text-danger order-1 order-md-0" (click)="removeProduct(product.id)">X</button>
+                  <img [src]="product.imageUrl" [alt]="product.name" class="img-fluid d-md-none" style="max-width: 50px;">
+                </div>
+                <div class="col-2 d-none d-md-block">
+                  <img [src]="product.imageUrl" [alt]="product.name" class="img-fluid" style="max-width: 50px;">
+                </div>
+                <div class="col-12 col-md-3 mb-2 mb-md-0">
+                  <span class="text-truncate d-inline-block" style="max-width: 100%;" [title]="product.name">{{ product.name }}</span>
+                </div>
+                <div class="col-4 col-md-2 mb-2 mb-md-0">
+                  <strong class="d-md-none">Precio: </strong>₡{{ product.price | number:'1.0-0' }}
+                </div>
+                <div class="col-4 col-md-2 mb-2 mb-md-0">
+                  <strong class="d-md-none">Cantidad: </strong>
+                  <input type="number" [(ngModel)]="product.quantity" min="1" class="form-control" (change)="updateCart()">
+                </div>
+                <div class="col-4 col-md-2">
+                  <strong class="d-md-none">Subtotal: </strong>₡{{ product.price * product.quantity | number:'1.0-0' }}
+                </div>
+              </div>
+              <hr *ngIf="!last">
+            </ng-container>
+            <button class="btn btn-danger float-right mt-3" (click)="updateCart()">Actualizar carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Summary -->
+      <div class="col-12 col-lg-4 mb-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Resumen</h5>
+            <div class="d-flex justify-content-between">
+              <span>Subtotal</span>
+              <span>₡{{ getSubtotal() | number:'1.0-0' }}</span>
+            </div>
+            <div class="d-flex justify-content-between">
+              <span>Envío</span>
+              <span>₡{{ shippingCost | number:'1.0-0' }}</span>
+            </div>
+            <small class="text-muted">De L-V de 7:00 a.m. a 5:00 p.m. te contactamos para coordinar la entrega. - Retiro gratis en bodega Escazú frente al hotel Sheraton</small>
+            <hr>
+            <div class="d-flex justify-content-between font-weight-bold">
+              <span>Total del pedido</span>
+              <span>₡{{ getTotal() | number:'1.0-0' }}</span>
+            </div>
+            <button class="btn btn-danger btn-block mt-3">Pagar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Discount Code -->
+    <div class="row">
+      <div class="col-12 col-lg-8">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Aplicar código de descuento</h5>
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Introducir el código de descuento">
+              <div class="input-group-append">
+                <button class="btn btn-danger" type="button">Aplicar descuento</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

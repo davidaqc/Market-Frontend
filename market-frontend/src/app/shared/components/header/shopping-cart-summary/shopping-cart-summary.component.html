@@ -10,7 +10,7 @@
     
     <div class="cart-items">
       <div *ngFor="let item of cartItems; let i = index" class="cart-item">
-        <img [src]="item.image" [alt]="item.name" class="item-image">
+        <img [src]="item.imageUrl" [alt]="item.name" class="item-image">
         <div class="item-details">
           <h6>{{ item.name }}</h6>
           <p>₡{{ item.price | number:'1.2-2' }}</p>
