@@ -9,6 +9,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { OffcanvasMenuComponent } from './components/header/offcanvas-menu/offcanvas-menu.component';
 import { ShoppingCartSummaryComponent } from './components/header/shopping-cart-summary/shopping-cart-summary.component';
+import { AutocompleteSearchComponent } from './components/header/autocomplete-search/autocomplete-search.component';
 
 
 
@@ -18,7 +19,8 @@ import { ShoppingCartSummaryComponent } from './components/header/shopping-cart-
     NavbarComponent,
     FooterComponent,
     OffcanvasMenuComponent,
-    ShoppingCartSummaryComponent
+    ShoppingCartSummaryComponent,
+    AutocompleteSearchComponent
   ],
   imports: [
     CommonModule,
