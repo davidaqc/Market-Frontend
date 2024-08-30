@@ -8,21 +8,32 @@ import { Component, HostListener } from '@angular/core';
 export class HeaderComponent {
 
   isShoppingCartVisible = false;
+  isSearchResultsVisible = false;
 
   toggleShoppingCart(event: Event) {
     event.stopPropagation();
     this.isShoppingCartVisible = !this.isShoppingCartVisible;
+    this.isSearchResultsVisible = false;
+  }
+
+  toggleSearchResults(event: Event) {
+    event.stopPropagation();
+    this.isSearchResultsVisible = !this.isSearchResultsVisible;
+    this.isShoppingCartVisible = false;
   }
 
   closeShoppingCart() {
     this.isShoppingCartVisible = false;
   }
 
+  closeSearchResults() {
+    this.isSearchResultsVisible = false;
+  }
+
   @HostListener('document:click', ['$event'])
   onDocumentClick(event: MouseEvent) {
-    if (this.isShoppingCartVisible) {
-      this.isShoppingCartVisible = false;
-    }
+    this.isShoppingCartVisible = false;
+    this.isSearchResultsVisible = false;
   }
 
 }

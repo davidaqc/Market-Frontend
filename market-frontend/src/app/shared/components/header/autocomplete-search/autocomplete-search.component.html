@@ -1,1 +1,21 @@
-<p>autocomplete-search works!</p>
+<div class="search-results-popover" (click)="$event.stopPropagation()">
+    <div class="search-header d-flex justify-content-between align-items-center">
+      <h5>Resultados de búsqueda</h5>
+      <button type="button" class="btn-close" aria-label="Close" (click)="closeSearchResults()"></button>
+    </div>
+    
+    <div class="search-items">
+      <div *ngFor="let product of products" class="search-item">
+        <img [src]="product.image" [alt]="product.name" class="product-image">
+        <div class="product-details">
+          <h6>{{ product.name }}</h6>
+          <p class="sku">SKU: {{ product.sku }}</p>
+          <p class="description">{{ product.description }}</p>
+          <p class="price">₡{{ product.price | number:'1.2-2' }}</p>
+        </div>
+        <button class="btn btn-danger btn-sm">Agregar</button>
+      </div>
+    </div>
+    
+    <button class="btn btn-outline-secondary w-100 mt-3">Ver todos 24</button>
+</div>
