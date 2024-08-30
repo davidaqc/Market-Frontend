@@ -19,7 +19,7 @@
     <div class="mx-3">
         <h2 class="h3 mb-4">Términos y condiciones del sitio web</h2>
 
-        <div class="mb-5">
+        <div id="politicas-generales" class="mb-5">
             <h3 class="h4 mb-3">I. Políticas generales</h3>
             <ol class="list-group list-group-numbered">
                 <li class="list-group-item">El servicio de compra en línea ofrecido a través del sitio web
@@ -78,7 +78,7 @@
             </ul>
         </div>
 
-        <div class="mb-5">
+        <div id="politicas-de-seguridad" class="mb-5">
             <h3 class="h4 mb-3">II. Políticas de seguridad</h3>
             <ul class="list-unstyled">
                 <li class="mb-2">- Pequeño Mundo cuenta con Certificado de Dominio Propio, el cual muestra la identidad
@@ -100,7 +100,7 @@
             </ul>
         </div>
 
-        <div class="mb-5">
+        <div id="politicas-de-pago" class="mb-5">
             <h3 class="h4 mb-3">III. Políticas de pago</h3>
             <ul class="list-unstyled">
                 <li class="mb-2">- El Cliente podrá pagar con las tarjetas de crédito o débito, nacionales o
@@ -139,7 +139,7 @@
                 transporte".</p>
         </div>
 
-        <div class="mb-5">
+        <div id="politicas-de-entrega" class="mb-5">
             <h3 class="h4 mb-3">IV. Políticas de entrega</h3>
             <ul class="list-unstyled">
                 <li class="mb-2">- Una vez despachado el pedido el tiempo máximo de entrega será de 5 días hábiles en
@@ -198,7 +198,7 @@
                 buen estado, y no se podrán realizar reclamaciones posteriores.</p>
         </div>
 
-        <div class="mb-5">
+        <div id="politicas-de-garantia" class="mb-5">
             <h3 class="h4 mb-3">V. Políticas de garantía</h3>
             <ul class="list-unstyled">
                 <li class="mb-2">- El periodo de garantía será de cuarenta y cinco (45) días naturales, iniciando a
@@ -216,7 +216,7 @@
             </ul>
         </div>
 
-        <div class="mb-5">
+        <div id="politicas-de-devolucion" class="mb-5">
             <h3 class="h4 mb-3">VI. Políticas de devolución, retracto y/o reintegro de dinero</h3>
             <p>Pequeño Mundo sólo aceptará devoluciones de acuerdo con la siguiente política:</p>
             <ol>
@@ -350,7 +350,7 @@
                 variará según el banco emisor de la tarjeta.</p>
         </div>
 
-        <div class="mb-5">
+        <div id="atencion-al-cliente" class="mb-5">
             <h3 class="h4 mb-3">VII. Atención al cliente</h3>
             <p>Para cualquier duda, sugerencia, consulta o reclamación sobre la tienda online, puede comunicarse al
                 centro de contacto de Pequeño Mundo, por cualquiera de los siguientes medios:</p>
@@ -370,7 +370,7 @@
                 reclamos.</p>
         </div>
 
-        <div class="mb-5">
+        <div id="consentimiento-informado" class="mb-5">
             <h3 class="h4 mb-3">VIII. Consentimiento informado relacionado con la recolección, tratamiento y uso de los
                 datos personales por parte de pequeño mundo y todas sus sociedades asociadas.</h3>
             <p>PEQUEÑO MUNDO, de conformidad con la Ley 8968 sobre la Protección de la Persona frente al tratamiento de
@@ -434,16 +434,16 @@
 
         <div class="mb-5">
             <nav class="nav flex-column">
-                <a href="#politicas-generales" class="mb-2">Políticas generales</a>
-                <a href="#politicas-de-seguridad" class="mb-2">Políticas de seguridad</a>
-                <a href="#politicas-de-pago" class="mb-2">Políticas de pago</a>
-                <a href="#politicas-de-entrega" class="mb-2">Políticas de entrega</a>
-                <a href="#politicas-de-garantia" class="mb-2">Políticas de garantía</a>
-                <a href="#politicas-de-devolucion" class="mb-2">Políticas de devolución</a>
-                <a href="#atencion-al-cliente" class="mb-2">Atención al cliente</a>
-                <a href="#consentimiento-informado">Consentimiento informado</a>
+                <a (click)="scrollTo('politicas-generales')" class="mb-2">Políticas generales</a>
+                <a (click)="scrollTo('politicas-de-seguridad')" class="mb-2">Políticas de seguridad</a>
+                <a (click)="scrollTo('politicas-de-pago')" class="mb-2">Políticas de pago</a>
+                <a (click)="scrollTo('politicas-de-entrega')" class="mb-2">Políticas de entrega</a>
+                <a (click)="scrollTo('politicas-de-garantia')" class="mb-2">Políticas de garantía</a>
+                <a (click)="scrollTo('politicas-de-devolucion')" class="mb-2">Políticas de devolución</a>
+                <a (click)="scrollTo('atencion-al-cliente')" class="mb-2">Atención al cliente</a>
+                <a (click)="scrollTo('consentimiento-informado')">Consentimiento informado</a>
             </nav>
-        </div>
+        </div>        
 
     </div>
 </div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-terms-and-conditions-page',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./terms-and-conditions-page.component.scss']
 })
 export class TermsAndConditionsPageComponent {
+  constructor(private router: Router) {}
 
+  scrollTo(id: string): void {
+    this.router.navigate([], { fragment: id });
+  }
 }
