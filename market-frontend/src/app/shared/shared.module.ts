@@ -5,6 +5,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { OffcanvasMenuComponent } from './components/header/offcanvas-menu/offcanvas-menu.component';
+import { ShoppingCartSummaryComponent } from './components/header/shopping-cart-summary/shopping-cart-summary.component';
 
 
 
@@ -13,7 +14,8 @@ import { OffcanvasMenuComponent } from './components/header/offcanvas-menu/offca
     HeaderComponent,
     NavbarComponent,
     FooterComponent,
-    OffcanvasMenuComponent
+    OffcanvasMenuComponent,
+    ShoppingCartSummaryComponent
   ],
   imports: [
     CommonModule,
