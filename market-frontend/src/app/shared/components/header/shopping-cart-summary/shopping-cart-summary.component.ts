@@ -11,9 +11,9 @@ export class ShoppingCartSummaryComponent {
   @Output() close = new EventEmitter<void>();
 
   cartItems: CartItem[] = [
-    { name: 'Candelas con cuerda 7.5c...', price: 4700, quantity: 3, image: 'assets/images/candelas.jpg', quantityChanged: false },
-    { name: 'Canasta lavanderia con ta...', price: 9800, quantity: 1, image: 'assets/images/canasta.jpg', quantityChanged: false },
-    { name: 'Biombo 3 paneles Paris M...', price: 195000, quantity: 1, image: 'assets/images/biombo.jpg', quantityChanged: false }
+    { id: 1, name: 'Candelas con cuerda 7.5c...', price: 4700, quantity: 3, imageUrl: 'assets/images/candelas.jpg', quantityChanged: false },
+    { id: 2, name: 'Canasta lavanderia con ta...', price: 9800, quantity: 1, imageUrl: 'assets/images/canasta.jpg', quantityChanged: false },
+    { id: 3, name: 'Biombo 3 paneles Paris M...', price: 195000, quantity: 1, imageUrl: 'assets/images/biombo.jpg', quantityChanged: false }
   ];
 
   get subtotal(): number {
