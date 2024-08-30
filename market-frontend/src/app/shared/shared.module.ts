@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { NgbPopoverModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { HeaderComponent } from './components/header/header.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -19,7 +22,9 @@ import { ShoppingCartSummaryComponent } from './components/header/shopping-cart-
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    FormsModule,
+    NgbPopoverModule
   ],
   exports: [
     HeaderComponent,

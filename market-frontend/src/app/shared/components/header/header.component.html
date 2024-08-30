@@ -24,16 +24,19 @@
 
     <!-- Navbar Items - visible only on larger screens -->
     <div class="d-none d-lg-flex align-items-center">
-      <a class="nav-link d-flex align-items-center mx-2" routerLink="user/newpassword" aria-label="Cart">
-        <i class="fa fa-shopping-cart me-2"></i>
-        <div class="d-flex flex-column">
-          <div class="d-flex align-items-center">
-            <span class="badge bg-danger me-2">0</span>
-            <i class="fa-solid fa-angle-down"></i>
+      <div class="position-relative">
+        <a class="nav-link d-flex align-items-center mx-2" (click)="toggleShoppingCart($event)" aria-label="Cart">
+          <i class="fa fa-shopping-cart me-2"></i>
+          <div class="d-flex flex-column">
+            <div class="d-flex align-items-center">
+              <span class="badge bg-danger me-2">3</span>
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+            <span class="small">Carrito</span>
           </div>
-          <span class="small">Carrito</span>
-        </div>
-      </a>
+        </a>
+        <app-shopping-cart-summary *ngIf="isShoppingCartVisible" class="position-absolute top-100 start-0 mt-2" (close)="closeShoppingCart()"></app-shopping-cart-summary>
+      </div>
       <a class="nav-link d-flex align-items-center mx-2" routerLink="#" aria-label="Wishlist">
         <i class="fa fa-heart me-2"></i>
         <div class="d-flex flex-column">

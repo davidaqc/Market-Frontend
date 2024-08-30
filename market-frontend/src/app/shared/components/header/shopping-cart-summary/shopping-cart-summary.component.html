@@ -1,1 +1,37 @@
-<p>shopping-cart-summary works!</p>
+<div class="shopping-cart-popover" (click)="$event.stopPropagation()">
+    <div class="cart-header d-flex justify-content-between align-items-center">
+      <h5>Subtotal del carrito de compras:</h5>
+      <button type="button" class="btn-close" aria-label="Close" (click)="closeCart()"></button>
+    </div>
+    <h4>₡{{ subtotal | number:'1.2-2' }}</h4>
+    <p>{{ totalItems }} artículos</p>
+    
+    <button class="btn btn-danger w-100 mb-3">Ir a Pagar</button>
+    
+    <div class="cart-items">
+      <div *ngFor="let item of cartItems; let i = index" class="cart-item">
+        <img [src]="item.image" [alt]="item.name" class="item-image">
+        <div class="item-details">
+          <h6>{{ item.name }}</h6>
+          <p>₡{{ item.price | number:'1.2-2' }}</p>
+          <div class="quantity-control">
+            <span>Cantidad:</span>
+            <input type="number" [(ngModel)]="item.quantity" (ngModelChange)="onQuantityChange(i)" min="1">
+          </div>
+        </div>
+        <div class="item-actions">
+          <button *ngIf="!item.quantityChanged" class="btn btn-sm btn-outline-secondary me-2" (click)="editItem(i)">
+            <i class="fas fa-pencil-alt"></i>
+          </button>
+          <button *ngIf="item.quantityChanged" class="btn btn-sm btn-outline-primary me-2" (click)="updateItem(i)">
+            Actualizar
+          </button>
+          <button class="btn btn-sm btn-outline-danger" (click)="removeItem(i)">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <button class="btn btn-outline-secondary w-100 mt-3">VER Y EDITAR CARRITO</button>
+  </div>
