@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./shipping.component.scss']
 })
 export class ShippingComponent {
+  currentStep: 'shipping' | 'payment' = 'shipping';
+
+  // When moving to payment step
+  goToPayment() {
+    this.currentStep = 'payment';
+  }
 
 }
