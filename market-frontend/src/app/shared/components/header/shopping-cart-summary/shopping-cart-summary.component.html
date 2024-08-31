@@ -6,7 +6,7 @@
     <h4>₡{{ subtotal | number:'1.2-2' }}</h4>
     <p>{{ totalItems }} artículos</p>
     
-    <button class="btn btn-danger w-100 mb-3">Ir a Pagar</button>
+    <a routerLink="/checkout/shipping" class="btn btn-danger w-100 mb-3">Ir a Pagar</a>
     
     <div class="cart-items">
       <div *ngFor="let item of cartItems; let i = index" class="cart-item">
@@ -33,5 +33,5 @@
       </div>
     </div>
     
-    <button class="btn btn-outline-secondary w-100 mt-3">VER Y EDITAR CARRITO</button>
+    <a routerLink="/checkout/review" class="btn btn-outline-secondary w-100 mt-3">VER Y EDITAR CARRITO</a>
   </div>
