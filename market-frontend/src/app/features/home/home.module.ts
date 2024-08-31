@@ -5,13 +5,15 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { CategoryListComponent } from './components/category-list/category-list.component';
+import { BottomInfoComponent } from './components/bottom-info/bottom-info.component';
 
 
 @NgModule({
   declarations: [
     HomePageComponent,
     SliderComponent,
-    CategoryListComponent
+    CategoryListComponent,
+    BottomInfoComponent
   ],
   imports: [
     CommonModule,
