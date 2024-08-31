@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-shipping',
-  templateUrl: './shipping.component.html',
-  styleUrls: ['./shipping.component.scss']
+  templateUrl: './shipping-page.component.html',
+  styleUrls: ['./shipping-page.component.scss']
 })
 export class ShippingComponent {
   currentStep: 'shipping' | 'payment' = 'shipping';
