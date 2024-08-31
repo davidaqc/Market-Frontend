@@ -38,7 +38,7 @@
         </a>
         <app-shopping-cart-summary *ngIf="isShoppingCartVisible" class="position-absolute top-100 start-0 mt-2" (close)="closeShoppingCart()"></app-shopping-cart-summary>
       </div>
-      <a class="nav-link d-flex align-items-center mx-2" routerLink="#" aria-label="Wishlist">
+      <a class="nav-link d-flex align-items-center mx-2" routerLink="/account/my-account" aria-label="Wishlist">
         <i class="fa fa-heart me-2"></i>
         <div class="d-flex flex-column">
           <span class="small text-nowrap">Lista de</span>
@@ -63,13 +63,13 @@
       <a class="nav-link d-flex align-items-center mx-2" routerLink="#" aria-label="Cart">
         <i class="fa fa-shopping-cart me-2"></i>
       </a>
-      <a class="nav-link d-flex align-items-center mx-2" routerLink="#" aria-label="Wishlist">
+      <a class="nav-link d-flex align-items-center mx-2" routerLink="/account/my-account" aria-label="Wishlist">
         <i class="fa fa-heart me-2"></i>
       </a>
-      <a class="nav-link d-flex align-items-center mx-2" routerLink="#" aria-label="User Account">
+      <a class="nav-link d-flex align-items-center mx-2" routerLink="user/login" aria-label="User Account">
         <i class="fa fa-user me-2"></i>
       </a>
-      <a class="nav-link mx-2" routerLink="#" aria-label="Register">
+      <a class="nav-link mx-2" routerLink="user/register" aria-label="Register">
         <span class="me-2">|</span>
         <span class="small">Regístrate</span>
       </a>

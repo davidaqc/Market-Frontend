@@ -11,8 +11,8 @@ const routes: Routes = [
     path: '',
     component: AccountLayoutComponent,
     children: [
-      { path: '', redirectTo: 'mi-cuenta', pathMatch: 'full' },
-      { path: 'mi-cuenta', component: MyAccountPageComponent },
+      { path: '', redirectTo: 'my-account', pathMatch: 'full' },
+      { path: 'my-account', component: MyAccountPageComponent },
       { path: 'edit', component: AccountInfoPageComponent },
       { path: 'gdpr', component: GdprPageComponent },
     ]
