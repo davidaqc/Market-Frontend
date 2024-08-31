@@ -1,0 +1,103 @@
+<app-checkout-stepper [currentStep]="currentStep"></app-checkout-stepper>
+
+<div class="container-fluid container-md mt-4">
+    <div class="row">
+      <div class="col-12 col-md-8">
+        <h2 class="mb-4">Dirección de envío</h2>
+        <hr class="my-2">
+        <form>
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="nombre" class="form-label">Nombre <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" id="nombre">
+            </div>
+            <div class="col-md-6">
+              <label for="apellido" class="form-label">Apellido <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" id="apellido">
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="telefono" class="form-label">Número de teléfono <span class="text-danger">*</span></label>
+            <input type="tel" class="form-control" id="telefono">
+            <small class="form-text text-muted">Verifique que su número de teléfono esté escrito correctamente.</small>
+          </div>
+
+          <h3 class="text-danger mb-2">Paso 1:</h3>
+          <p class="fw-bold mb-3">Escoja su ubicación.</p>
+          <div class="mb-3">
+            <label for="estado" class="form-label">Estado/Provincia <span class="text-danger">*</span></label>
+            <select class="form-select" id="estado">
+              <option value="">Seleccione...</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="canton" class="form-label">Cantón <span class="text-danger">*</span></label>
+            <select class="form-select" id="canton">
+              <option value="">Seleccione...</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="distrito" class="form-label">Distrito <span class="text-danger">*</span></label>
+            <select class="form-select" id="distrito">
+              <option value="">Seleccione...</option>
+            </select>
+          </div>
+
+          <h3 class="text-danger mb-2">Paso 2:</h3>
+          <p class="fw-bold mb-3">En el siguiente mapa, confirme su dirección exacta. Ubicando el puntero en la dirección de entrega.</p>
+          <small class="text-danger">Nota: Es requerido agregar un punto de entrega en el mapa</small>
+          <div class="mb-3">
+            <label for="ubicacion" class="form-label">Busca tu ubicación</label>
+            <input type="text" class="form-control" id="ubicacion">
+          </div>
+          <div class="mb-3">
+            <!-- Placeholder for map component -->
+            <div class="border p-2 mt-2">Map component will be inserted here</div>
+          </div>
+
+          <h3 class="text-danger mb-2">Paso 3:</h3>
+          <p class="fw-bold mb-3">Dirección exacta con referencias detalladas.</p>
+          <div class="mb-3">
+            <label for="direccionExacta" class="form-label">Dirección <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" id="direccionExacta" placeholder="Digite su dirección exacta">
+          </div>
+          <div class="mb-3">
+            <label for="numeroCasa" class="form-label">Número de casa o descripción</label>
+            <input type="text" class="form-control" id="numeroCasa" placeholder="Número de casa o descripción">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" id="referenciaAdicional" placeholder="Referencias adicionales">
+          </div>
+
+          <h3 class="text-danger mb-2">Paso 4:</h3>
+          <p class="fw-bold mb-3">¿Requiere Factura Electrónica?</p>
+          <div class="mb-3">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="facturaElectronica" id="facturaNo" value="no">
+              <label class="form-check-label" for="facturaNo">No</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="facturaElectronica" id="facturaSi" value="si">
+              <label class="form-check-label" for="facturaSi">Si</label>
+            </div>
+          </div>          
+
+          <div class="mt-4">
+            <h3 class="mb-3">Métodos de envío</h3>
+            <hr class="my-2">
+            <div class="d-flex justify-content-between align-items-center">
+              <p class="text-muted mb-0">Lo sentimos, no hay cotizaciones disponibles para este pedido en este momento.</p>
+              <a href="#" class="text-primary">Ver nuestra política de envíos</a>
+            </div>
+          </div>
+
+        </form>
+      </div>
+
+      <!-- Payment summary -->
+      <div class="col-12 col-md-4">
+        <!-- Placeholder for payment component -->
+        <div class="border p-2 mt-2">Payment component will be inserted here</div>
+      </div>
+    </div>
+</div>

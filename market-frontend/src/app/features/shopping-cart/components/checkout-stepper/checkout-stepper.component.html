@@ -1,0 +1,14 @@
+<div class="stepper-container">
+    <div class="stepper">
+      <ng-container *ngFor="let step of steps; let i = index; let last = last">
+        <div class="step" [ngClass]="{'completed': step.completed}">
+          <div class="step-indicator">
+            <span class="step-number">{{ i + 1 }}</span>
+            <span class="step-check">✓</span>
+          </div>
+          <div class="step-label">{{ step.name }}</div>
+        </div>
+        <div *ngIf="!last" class="step-line" [ngClass]="{'completed': steps[i+1].completed}"></div>
+      </ng-container>
+    </div>
+</div>

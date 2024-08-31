@@ -1,0 +1,78 @@
+<app-checkout-stepper [currentStep]="currentStep"></app-checkout-stepper>
+
+<div class="container-fluid container-md">
+    <div class="row">
+      <!-- Payment Method Form -->
+      <div class="col-12 col-lg-8 mb-4">
+        <h2>Método de pago</h2>
+        <form>
+          <div class="row mb-3">
+            <div class="col-12 col-md-4">
+              <label for="cardName" class="form-label">Nombre que aparece en la tarjeta</label>
+              <input type="text" class="form-control" id="cardName">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-12 col-md-4">
+              <label for="cardNumber" class="form-label">Número de la tarjeta de crédito</label>
+              <input type="text" class="form-control" id="cardNumber">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-12 col-md-4">
+              <label for="expiryDate" class="form-label">Fecha de vencimiento</label>
+              <input type="text" class="form-control" id="expiryDate">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-12 col-md-4">
+              <label for="cvv" class="form-label">Número de verificación de tarjeta</label>
+              <input type="text" class="form-control" id="cvv">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-12">
+              <label for="comment" class="form-label">Escribir comentario (opcional)</label>
+              <textarea class="form-control" id="comment" rows="3"></textarea>
+            </div>
+          </div>
+        </form>
+        <button class="btn btn-danger">Realizar pedido</button>
+      </div>
+
+      <!-- Order Summary -->
+      <div class="col-12 col-lg-4">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h3 class="card-title">Resumen de pago</h3>
+            <p>Subtotal del carrito de compras: {{ orderSummary.subtotal | currency:'₡' }}</p>
+            <p>Envío: {{ orderSummary.shipping | currency:'₡' }}</p>
+            <hr>
+            <h4>Total del pedido: {{ orderSummary.total | currency:'₡' }}</h4>
+            <p>{{ orderSummary.itemCount }} Productos en el carrito</p>
+          </div>
+        </div>
+
+        <!-- Shipping Information -->
+        <div class="card mb-4">
+          <div class="card-body">
+            <h3 class="card-title">Enviar a:</h3>
+            <p>{{ shippingInfo.name }}</p>
+            <p>{{ shippingInfo.address1 }}</p>
+            <p>{{ shippingInfo.cityState }}</p>
+            <p>{{ shippingInfo.country }}</p>
+            <p>{{ shippingInfo.phone }}</p>
+            <p>{{ shippingInfo.coordinates.lat }}, {{ shippingInfo.coordinates.lng }}</p>
+          </div>
+        </div>
+
+        <!-- Shipping Method -->
+        <div class="card mb-4">
+          <div class="card-body">
+            <h3 class="card-title">Método de envío:</h3>
+            <p>De L-V de 7:00 a.m. a 5:00 p.m. te contactamos para coordinar la entrega. - Retiro gratis en bodega Escazú frente al hotel Sheraton</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
