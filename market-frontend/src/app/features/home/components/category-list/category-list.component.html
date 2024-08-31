@@ -3,23 +3,28 @@
     <h2 class="text-center">Categorías</h2>
   </div>
 
-  <div class="category-carousel text-center mx-auto">
-    <div class="row">
-      <div class="col-2 d-flex align-items-center justify-content-center">
+  <div class="category-carousel text-center mx-auto px-2">
+    <div class="row align-items-center">
+      <div class="col-1 d-flex align-items-center justify-content-center">
         <i class="fas fa-chevron-left cursor-pointer" (click)="previousSlide()"></i>
       </div>
-      <div class="col-8">
-        <div class="row">
-          <div class="d-flex justify-content-center">
-            <div class="d-inline-flex">
-              <div class="category-item mx-2" *ngFor="let category of visibleCategories">
-                <img [src]="category.image" [alt]="category.name" class="img-fluid mb-2">
+      <div class="col-10">
+        <div class="carousel-container">
+          <div class="carousel-content">
+            <ng-container *ngFor="let category of visibleCategories; let i = index">
+              <div class="category-item">
+                <ng-container *ngIf="category.image">
+                  <img [src]="category.image" [alt]="category.name" class="img-fluid mb-2">
+                </ng-container>
+                <ng-container *ngIf="!category.image">
+                  <p>{{ category.name }}</p>
+                </ng-container>
               </div>
-            </div>
+            </ng-container>
           </div>
         </div>
       </div>
-      <div class="col-2 d-flex align-items-center justify-content-center">
+      <div class="col-1 d-flex align-items-center justify-content-center">
         <i class="fas fa-chevron-right cursor-pointer" (click)="nextSlide()"></i>
       </div>
     </div>
