@@ -1,0 +1,22 @@
+.bottom-info {
+    background-color: #f4f4f4;
+}
+
+.icon-img {
+    width: 4rem; 
+    height: auto;
+}
+
+.link-item:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--primary-color);
+}
+
+.text-hover {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.text-hover:hover {
+    transform: scale(1.3);
+}

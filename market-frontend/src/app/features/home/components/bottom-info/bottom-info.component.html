@@ -1,1 +1,33 @@
-<p>bottom-info works!</p>
+<!-- Bottom Information -->
+<div class="bottom-info py-5">
+    <div class="container-fluid container-md">
+      <div class="row text-center">
+        <div class="col-md-4 mb-3">
+          <a routerLink="/info/faq" class="link-item">
+            <img src="assets/images/Icono_Preguntas_Frecuentes.png" alt="Preguntas Frecuentes" class="img-fluid icon-img">
+            <h5>Preguntas</h5>
+            <p class="text-muted">frecuentes</p>
+          </a>
+        </div>
+        <div class="col-md-4 mb-3">
+          <a routerLink="/info/faq" class="link-item">
+            <img src="assets/images/Icono_Mas_Unidades.png" alt="Más Unidades" class="img-fluid icon-img">
+            <h5>¿Necesitas más unidades?</h5>
+            <p class="text-muted">haz click aquí</p>
+          </a>
+        </div>
+        <div class="col-md-4 mb-3">
+          <a [routerLink]="['/info/terms-and-conditions']" fragment="politicas-de-devolucion" class="link-item">
+            <img src="assets/images/Icono_Garantia.png" alt="Garantía" class="img-fluid icon-img">
+            <h5>Devolución de 45 días</h5>
+            <p class="text-muted">al presentar la factura en tienda</p>
+          </a>
+        </div>
+      </div>
+    </div>
+</div>
+  
+<!-- Job Offers -->
+<div class="bg-danger text-white p-4 text-center">
+    <h4 class="m-0 text-hover">Ofertas de empleo</h4>
+</div>
