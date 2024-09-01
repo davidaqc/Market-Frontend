@@ -6,6 +6,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { CategoryListComponent } from './components/category-list/category-list.component';
 import { BottomInfoComponent } from './components/bottom-info/bottom-info.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { BottomInfoComponent } from './components/bottom-info/bottom-info.compon
     HomePageComponent,
     SliderComponent,
     CategoryListComponent,
-    BottomInfoComponent
+    BottomInfoComponent,
+    CarouselComponent
   ],
   imports: [
     CommonModule,
