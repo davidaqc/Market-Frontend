@@ -5,6 +5,7 @@ import { AccountLayoutComponent } from './layout/account-layout/account-layout.c
 import { MyAccountPageComponent } from './pages/my-account-page/my-account-page.component';
 import { AccountInfoPageComponent } from './pages/account-info-page/account-info-page.component';
 import { GdprPageComponent } from './pages/gdpr-page/gdpr-page.component';
+import { NewAddressBookPageComponent } from './pages/new-address-book-page/new-address-book-page.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,7 @@ const routes: Routes = [
       { path: 'my-account', component: MyAccountPageComponent },
       { path: 'edit', component: AccountInfoPageComponent },
       { path: 'gdpr', component: GdprPageComponent },
+      { path: 'new', component: GdprPageComponent },
     ]
   }
 ];

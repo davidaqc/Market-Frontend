@@ -7,6 +7,7 @@ import { AccountLayoutComponent } from './layout/account-layout/account-layout.c
 import { MyAccountPageComponent } from './pages/my-account-page/my-account-page.component';
 import { AccountInfoPageComponent } from './pages/account-info-page/account-info-page.component';
 import { GdprPageComponent } from './pages/gdpr-page/gdpr-page.component';
+import { NewAddressBookPageComponent } from './pages/new-address-book-page/new-address-book-page.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { GdprPageComponent } from './pages/gdpr-page/gdpr-page.component';
     AccountLayoutComponent,
     MyAccountPageComponent,
     AccountInfoPageComponent,
-    GdprPageComponent
+    GdprPageComponent,
+    NewAddressBookPageComponent
   ],
   imports: [
     CommonModule,
