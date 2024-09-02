@@ -1,0 +1,19 @@
+.card-img-top {
+  object-fit: contain;
+  height: 200px;
+}
+
+.card-header {
+  cursor: pointer;
+}
+
+.form-select {
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  .form-select {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}
