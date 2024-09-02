@@ -15,6 +15,7 @@ import { MyDownloadableProductsPageComponent } from './pages/my-downloadable-pro
 import { StoredPaymentMethodsPageComponent } from './pages/stored-payment-methods-page/stored-payment-methods-page.component';
 import { NewsletterPageComponent } from './pages/newsletter-page/newsletter-page.component';
 import { ReviewsPageComponent } from './pages/reviews-page/reviews-page.component';
+import { WishlistPageComponent } from './pages/wishlist-page/wishlist-page.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { ReviewsPageComponent } from './pages/reviews-page/reviews-page.componen
     MyDownloadableProductsPageComponent,
     StoredPaymentMethodsPageComponent,
     NewsletterPageComponent,
-    ReviewsPageComponent
+    ReviewsPageComponent,
+    WishlistPageComponent
   ],
   imports: [
     CommonModule,
