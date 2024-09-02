@@ -6,6 +6,7 @@ import { FaqPageComponent } from './pages/faq-page/faq-page.component';
 import { ContactUsPageComponent } from './pages/contact-us-page/contact-us-page.component';
 import { AboutUsPageComponent } from './pages/about-us-page/about-us-page.component';
 import { TermsAndConditionsPageComponent } from './pages/terms-and-conditions-page/terms-and-conditions-page.component';
+import { EmploymentPageComponent } from './pages/employment-page/employment-page.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { TermsAndConditionsPageComponent } from './pages/terms-and-conditions-pa
     FaqPageComponent,
     ContactUsPageComponent,
     AboutUsPageComponent,
-    TermsAndConditionsPageComponent
+    TermsAndConditionsPageComponent,
+    EmploymentPageComponent
   ],
   imports: [
     CommonModule,
