@@ -16,7 +16,7 @@ const routes: Routes = [
       { path: 'my-account', component: MyAccountPageComponent },
       { path: 'edit', component: AccountInfoPageComponent },
       { path: 'gdpr', component: GdprPageComponent },
-      { path: 'new', component: GdprPageComponent },
+      { path: 'new', component: NewAddressBookPageComponent },
     ]
   }
 ];

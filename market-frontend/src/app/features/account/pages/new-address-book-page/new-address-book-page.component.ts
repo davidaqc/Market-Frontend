@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./new-address-book-page.component.scss']
 })
 export class NewAddressBookPageComponent {
-
+  nombre: string = 'David';
+  apellido: string = 'Quesada';
+  telefono: string = '';
+  ubicacion: string = '';
+  provincia: string = '';
+  canton: string = '';
+  distrito: string = '';
+  direccion: string = '';
+  direccionPredeterminada: boolean = false;
 }
