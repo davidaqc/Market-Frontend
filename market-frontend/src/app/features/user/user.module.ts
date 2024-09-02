@@ -7,6 +7,7 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { ForgotPasswordPageComponent } from './pages/forgot-password-page/forgot-password-page.component';
 import { NewPasswordPageComponent } from './pages/new-password-page/new-password-page.component';
 import { UserLayoutComponent } from './layout/user-layout/user-layout.component';
+import { AdvancedSearchPageComponent } from './pages/advanced-search-page/advanced-search-page.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { UserLayoutComponent } from './layout/user-layout/user-layout.component'
     LoginPageComponent,
     ForgotPasswordPageComponent,
     NewPasswordPageComponent,
-    UserLayoutComponent
+    UserLayoutComponent,
+    AdvancedSearchPageComponent
   ],
   imports: [
     CommonModule,
