@@ -11,6 +11,7 @@ import { MyOrdersPageComponent } from './pages/my-orders-page/my-orders-page.com
 import { MyDownloadableProductsPageComponent } from './pages/my-downloadable-products-page/my-downloadable-products-page.component';
 import { StoredPaymentMethodsPageComponent } from './pages/stored-payment-methods-page/stored-payment-methods-page.component';
 import { NewsletterPageComponent } from './pages/newsletter-page/newsletter-page.component';
+import { ReviewsPageComponent } from './pages/reviews-page/reviews-page.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,7 @@ const routes: Routes = [
       { path: 'my-downloadable-products', component: MyDownloadableProductsPageComponent },
       { path: 'stored-payment-methods', component: StoredPaymentMethodsPageComponent },
       { path: 'newsletter', component: NewsletterPageComponent },
+      { path: 'reviews', component: ReviewsPageComponent },
     ]
   }
 ];

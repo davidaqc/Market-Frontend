@@ -14,6 +14,7 @@ import { MyOrdersPageComponent } from './pages/my-orders-page/my-orders-page.com
 import { MyDownloadableProductsPageComponent } from './pages/my-downloadable-products-page/my-downloadable-products-page.component';
 import { StoredPaymentMethodsPageComponent } from './pages/stored-payment-methods-page/stored-payment-methods-page.component';
 import { NewsletterPageComponent } from './pages/newsletter-page/newsletter-page.component';
+import { ReviewsPageComponent } from './pages/reviews-page/reviews-page.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { NewsletterPageComponent } from './pages/newsletter-page/newsletter-page
     MyOrdersPageComponent,
     MyDownloadableProductsPageComponent,
     StoredPaymentMethodsPageComponent,
-    NewsletterPageComponent
+    NewsletterPageComponent,
+    ReviewsPageComponent
   ],
   imports: [
     CommonModule,
