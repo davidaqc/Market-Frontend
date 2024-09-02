@@ -1,0 +1,16 @@
+.category-title {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
+.category-title::before,
+.category-title::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #333132;
+  margin: 0 10px;
+}
+.category-item {
+  text-align: center;
+}

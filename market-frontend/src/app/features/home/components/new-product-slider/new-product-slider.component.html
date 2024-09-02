@@ -1,0 +1,20 @@
+<div class="container-md">
+    <div class="slider-title">
+      <h2 class="text-center">Nuevos Productos</h2>
+    </div>
+    <app-carousel [items]="products" [itemTemplate]="productTemplate">
+      <ng-template #productTemplate let-product>
+        <div class="card text-center position-relative">
+          <span class="badge bg-success rounded-0 position-absolute">Nuevo</span>
+          <img [src]="product.image" alt="Product Image" class="img-fluid mb-2">
+          <div class="card-body">
+            <h5 class="card-title text-truncate">{{ product.name }}</h5>
+            <p class="card-text">
+              <strong>₡{{ product.price | number:'1.2-2' }}</strong>
+            </p>
+            <a href="#" class="btn btn-danger">Agregar al Carrito</a>
+          </div>
+        </div>
+      </ng-template>
+    </app-carousel>
+</div>  

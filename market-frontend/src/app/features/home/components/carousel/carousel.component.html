@@ -1,0 +1,13 @@
+<div class="carousel">
+  <button (click)="previousSlide()" class="carousel-button previous">&lt;</button>
+  <div class="carousel-container">
+    <div class="carousel-content" [style.transform]="'translateX(' + translateX + 'px)'">
+      <ng-container *ngFor="let item of visibleItems">
+        <div class="carousel-unit">
+          <ng-container *ngTemplateOutlet="itemTemplate; context: { $implicit: item }"></ng-container>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <button (click)="nextSlide()" class="carousel-button next">&gt;</button>
+</div>

@@ -1,0 +1,16 @@
+a {
+    color: var(--primary-color);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.text-hover {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.text-hover:hover {
+    transform: scale(1.3);
+}

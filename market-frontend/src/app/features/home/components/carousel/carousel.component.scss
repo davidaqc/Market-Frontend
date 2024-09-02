@@ -1,0 +1,24 @@
+.carousel {
+  display: flex;
+  align-items: center;
+}
+.carousel-container {
+  overflow: hidden;
+  flex: 1;
+}
+.carousel-content {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.carousel-unit {
+  flex: 0 0 auto;
+  width: calc(100% / var(--items-to-show));
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+.carousel-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}

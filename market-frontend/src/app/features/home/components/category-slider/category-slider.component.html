@@ -1,0 +1,12 @@
+<div class="container-md">
+  <div class="category-title">
+    <h2 class="text-center">Categorías</h2>
+  </div>
+  <app-carousel [items]="categories" [itemTemplate]="categoryTemplate">
+    <ng-template #categoryTemplate let-category>
+      <div class="category-item">
+        <img [src]="category.image" [alt]="category.name" class="img-fluid mb-2">
+      </div>
+    </ng-template>
+  </app-carousel>
+</div>
