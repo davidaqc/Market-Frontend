@@ -10,6 +10,7 @@ import { AddressBookPageComponent } from './pages/address-book-page/address-book
 import { MyOrdersPageComponent } from './pages/my-orders-page/my-orders-page.component';
 import { MyDownloadableProductsPageComponent } from './pages/my-downloadable-products-page/my-downloadable-products-page.component';
 import { StoredPaymentMethodsPageComponent } from './pages/stored-payment-methods-page/stored-payment-methods-page.component';
+import { NewsletterPageComponent } from './pages/newsletter-page/newsletter-page.component';
 
 const routes: Routes = [
   {
@@ -25,6 +26,7 @@ const routes: Routes = [
       { path: 'my-orders', component: MyOrdersPageComponent },
       { path: 'my-downloadable-products', component: MyDownloadableProductsPageComponent },
       { path: 'stored-payment-methods', component: StoredPaymentMethodsPageComponent },
+      { path: 'newsletter', component: NewsletterPageComponent },
     ]
   }
 ];

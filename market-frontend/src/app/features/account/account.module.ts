@@ -13,6 +13,7 @@ import { AddressBookPageComponent } from './pages/address-book-page/address-book
 import { MyOrdersPageComponent } from './pages/my-orders-page/my-orders-page.component';
 import { MyDownloadableProductsPageComponent } from './pages/my-downloadable-products-page/my-downloadable-products-page.component';
 import { StoredPaymentMethodsPageComponent } from './pages/stored-payment-methods-page/stored-payment-methods-page.component';
+import { NewsletterPageComponent } from './pages/newsletter-page/newsletter-page.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { StoredPaymentMethodsPageComponent } from './pages/stored-payment-method
     AddressBookPageComponent,
     MyOrdersPageComponent,
     MyDownloadableProductsPageComponent,
-    StoredPaymentMethodsPageComponent
+    StoredPaymentMethodsPageComponent,
+    NewsletterPageComponent
   ],
   imports: [
     CommonModule,
