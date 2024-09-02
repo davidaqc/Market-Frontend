@@ -52,7 +52,7 @@
                                 </ng-container>
                             </p>
                             <p class="card-text">₡{{ product.price.toFixed(2) }}</p>
-                            <button class="btn btn-danger w-100" (click)="addToCart(product)">Agregar al Carrito</button>
+                            <a routerLink="/product/product-detail" class="btn btn-danger w-100" (click)="addToCart(product)">Agregar al Carrito</a>
                         </div>
                     </div>
                 </div>
