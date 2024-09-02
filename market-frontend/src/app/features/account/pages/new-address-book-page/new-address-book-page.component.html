@@ -1,0 +1,62 @@
+<div class="custom-border">
+    <div class="container-fluid">
+      <form>
+        <div class="row">
+          <div class="col-md-6">
+            <h5 class="text-danger mb-3">INFORMACIÓN DE CONTACTO</h5>
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre *</label>
+              <input type="text" class="form-control" id="nombre" [(ngModel)]="nombre" name="nombre" required value="David">
+            </div>
+            <div class="mb-3">
+              <label for="apellido" class="form-label">Apellido *</label>
+              <input type="text" class="form-control" id="apellido" [(ngModel)]="apellido" name="apellido" required value="Quesada">
+            </div>
+            <div class="mb-3">
+              <label for="telefono" class="form-label">Número de teléfono *</label>
+              <input type="tel" class="form-control" id="telefono" [(ngModel)]="telefono" name="telefono" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label text-danger">Nota: Es requerido agregar un punto de entrega en el mapa</label>
+            </div>
+            <div class="mb-3">
+              <label for="ubicacion" class="form-label">Busca tu ubicación</label>
+              <input type="text" class="form-control" id="ubicacion" [(ngModel)]="ubicacion" name="ubicacion" placeholder="Ubicación">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h5 class="text-danger mb-3">DIRECCIÓN</h5>
+            <div class="mb-3">
+              <label for="provincia" class="form-label">Provincia *</label>
+              <select class="form-select" id="provincia" [(ngModel)]="provincia" name="provincia" required>
+                <option selected>Por favor seleccione región, estado o provincia.</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="canton" class="form-label">Cantón *</label>
+              <select class="form-select" id="canton" [(ngModel)]="canton" name="canton" required>
+                <option selected>Seleccione</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="distrito" class="form-label">Distrito *</label>
+              <select class="form-select" id="distrito" [(ngModel)]="distrito" name="distrito" required>
+                <option selected>Seleccione</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="direccion" class="form-label">Dirección *</label>
+              <textarea class="form-control" id="direccion" [(ngModel)]="direccion" name="direccion" rows="3" required></textarea>
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="direccionPredeterminada" [(ngModel)]="direccionPredeterminada" name="direccionPredeterminada">
+              <label class="form-check-label" for="direccionPredeterminada">Usar como mi dirección predeterminada</label>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-end mt-3">
+          <button type="submit" class="btn btn-danger">Guardar Dirección</button>
+        </div>
+      </form>
+    </div>
+</div>
