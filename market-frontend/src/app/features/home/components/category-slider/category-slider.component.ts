@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-category-list',
-  templateUrl: './category-list.component.html',
-  styleUrls: ['./category-list.component.scss']
+  selector: 'app-category-slider',
+  templateUrl: './category-slider.component.html',
+  styleUrls: ['./category-slider.component.scss']
 })
-export class CategoryListComponent {
+export class CategorySliderComponent {
   categories = [
     { name: 'Espejos', image: 'assets/images/espejos.png' },
     { name: 'Herramientas', image: 'assets/images/herramientas.png' },
