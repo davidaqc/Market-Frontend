@@ -7,6 +7,7 @@ import { BannerSliderComponent } from './components/banner-slider/banner-slider.
 import { CategorySliderComponent } from './components/category-slider/category-slider.component';
 import { BottomInfoComponent } from './components/bottom-info/bottom-info.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { NewProductSliderComponent } from './components/new-product-slider/new-product-slider.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     BannerSliderComponent,
     CategorySliderComponent,
     BottomInfoComponent,
-    CarouselComponent
+    CarouselComponent,
+    NewProductSliderComponent
   ],
   imports: [
     CommonModule,
