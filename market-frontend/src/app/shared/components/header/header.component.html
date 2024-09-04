@@ -16,10 +16,12 @@
 
     <!-- Search Bar -->
     <form class="d-flex flex-grow-1 mx-3 position-relative" role="search">
-      <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-      <button class="btn btn-danger" type="button" (click)="toggleSearchResults($event)">
-        <i class="fa fa-search"></i>
-      </button>
+      <div class="input-group">
+        <input class="form-control" type="search" placeholder="Buscar" aria-label="Search">
+        <button class="btn btn-danger" type="button" (click)="toggleSearchResults($event)">
+          <i class="fa fa-search"></i>
+        </button>
+      </div>
       <app-autocomplete-search *ngIf="isSearchResultsVisible" class="position-absolute top-100 start-0 mt-2" (close)="closeSearchResults()"></app-autocomplete-search>
     </form>
 
