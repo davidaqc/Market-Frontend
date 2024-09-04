@@ -1,6 +1,6 @@
 .nav-tabs .nav-link.active {
-  color: #dc3545;
-  border-bottom: 2px solid #dc3545;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
 }
 
 .nav-tabs .nav-link {
