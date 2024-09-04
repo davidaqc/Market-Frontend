@@ -1,8 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
-$theme-colors: (
-  "danger": #cc0000
-);
+$danger: #cc0000;
 @import "bootstrap/scss/bootstrap";
 
 :root {
