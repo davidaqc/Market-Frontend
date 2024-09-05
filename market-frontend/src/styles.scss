@@ -40,3 +40,16 @@ h5 {
 .nowrap {
     white-space: nowrap;
 }
+
+// Ajuste del padding para el encabezado fijo
+body {
+    padding-top: 70px;
+
+    @media (max-width: 991px) {
+        padding-top: 65px;
+    }
+
+    @media (max-width: 767px) {
+        padding-top: 115px;
+    }
+}
