@@ -9,6 +9,7 @@ export class HeaderComponent {
 
   isShoppingCartVisible = false;
   isSearchResultsVisible = false;
+  cartItemCount = 0;
 
   toggleShoppingCart(event: Event) {
     event.stopPropagation();

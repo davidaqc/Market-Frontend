@@ -19,3 +19,12 @@
     position: absolute;
     z-index: 1000;
 }
+
+@media (max-width: 767px) {
+    .search-form {
+      width: 100%;
+    }
+    .text-center-sm {
+        text-align: center;
+    }
+}
