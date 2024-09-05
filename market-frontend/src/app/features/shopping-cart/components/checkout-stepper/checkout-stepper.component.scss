@@ -28,7 +28,7 @@
 }
 
 .step.completed .step-indicator {
-  background-color: var(--primary-color);
+  background-color: var(--danger-color);
   color: white;
 }
 
@@ -54,7 +54,7 @@
 }
 
 .step.completed .step-label {
-  color: var(--primary-color);
+  color: var(--danger-color);
 }
 
 .step-line {
@@ -64,5 +64,5 @@
 }
 
 .step-line.completed {
-  background-color: var(--primary-color);
+  background-color: var(--danger-color);
 }

@@ -23,7 +23,7 @@
           <button *ngIf="!item.quantityChanged" class="btn btn-sm btn-outline-secondary me-2" (click)="editItem(i)">
             <i class="fas fa-pencil-alt"></i>
           </button>
-          <button *ngIf="item.quantityChanged" class="btn btn-sm btn-outline-primary me-2" (click)="updateItem(i)">
+          <button *ngIf="item.quantityChanged" class="btn btn-sm btn-outline-danger me-2" (click)="updateItem(i)">
             Actualizar
           </button>
           <button class="btn btn-sm btn-outline-danger" (click)="removeItem(i)">

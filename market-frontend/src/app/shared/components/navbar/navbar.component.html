@@ -1,25 +1,23 @@
-<div (mouseleave)="clearActiveCategory()">
-  <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-md navbar-light bg-light d-none d-md-block">
-    <div class="container-md">
-      <ul class="navbar-nav d-flex flex-wrap w-100">
-        <li class="nav-item" *ngFor="let category of categories" (mouseover)="setActiveCategory(category)" class="nav-item-wrapper">
-          <a class="nav-link text-uppercase fw-bold px-3 py-2" [class.active]="category === activeCategory">
-            {{ category.name }}
-          </a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- Subcategories -->
-  <div class="subcategories-wrapper position-absolute w-100" *ngIf="activeCategory">
-    <div class="container">
-      <div class="row bg-white shadow-sm p-3">
-        <div class="col-3 g-3" *ngFor="let subcategory of activeCategory.subcategories">
-          <a routerLink="/product/product-list" class="text-decoration-none text-dark">{{ subcategory }}</a>
+<nav class="navbar navbar-expand-md navbar-light bg-light d-none d-md-block">
+  <div class="container-md" (mouseleave)="clearActiveCategory()">
+    <ul class="navbar-nav d-flex flex-wrap w-100">
+      <li class="nav-item" *ngFor="let category of categories" (mouseover)="setActiveCategory(category)"
+        class="nav-item-wrapper">
+        <!-- Categories -->
+        <a class="nav-link text-uppercase fw-bold px-3 py-2" [class.active]="category === activeCategory">
+          {{ category.name }}
+        </a>
+        <!-- Subcategories -->
+        <div class="subcategories-wrapper position-absolute w-100" *ngIf="category === activeCategory">
+          <div class="container-md" (mouseleave)="clearActiveCategory()">
+            <div class="row bg-white shadow-sm p-3">
+              <div class="col-3 g-3" *ngFor="let subcategory of activeCategory.subcategories">
+                <a routerLink="/product/product-list" class="text-decoration-none text-dark">{{ subcategory }}</a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      </li>
+    </ul>
   </div>
-</div>
+</nav>

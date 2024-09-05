@@ -1,21 +1,31 @@
 .navbar .nav-link .small {
-    line-height: 1.2;
+  line-height: 1.2;
 }
 
 /* Custom navbar-toggler on small screen  */
 .custom-toggler {
-    border: none;
+  border: none;
 }
 
 .custom-toggler:focus {
-    box-shadow: none;
+  box-shadow: none;
 }
 
 .position-relative {
-    position: relative;
+  position: relative;
 }
-  
+
 .position-absolute {
-    position: absolute;
-    z-index: 1000;
+  position: absolute;
+  z-index: 1000;
+}
+
+@media (max-width: 767px) {
+  .search-form {
+    width: 100%;
+    padding-top: 5px;
+  }
+  .text-center-sm {
+    text-align: center;
+  }
 }
