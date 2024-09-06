@@ -1,37 +1,41 @@
-<div class="shopping-cart-popover" (click)="$event.stopPropagation()">
-    <div class="cart-header d-flex justify-content-between align-items-center">
-      <h5>Subtotal del carrito de compras:</h5>
-      <button type="button" class="btn-close" aria-label="Close" (click)="closeCart()"></button>
+<div class="shopping-cart-popover p-3" (click)="$event.stopPropagation()">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <div>
+      <small class="text-muted">Subtotal del carrito de compras :</small>
+      <h5 class="mb-0 fw-bold">₡{{ subtotal | number:'1.0-0' }}</h5>
     </div>
-    <h4>₡{{ subtotal | number:'1.2-2' }}</h4>
-    <p>{{ totalItems }} artículos</p>
-    
-    <a routerLink="/checkout/shipping" class="btn btn-danger w-100 mb-3">Ir a Pagar</a>
-    
-    <div class="cart-items">
-      <div *ngFor="let item of cartItems; let i = index" class="cart-item">
-        <img [src]="item.imageUrl" [alt]="item.name" class="item-image">
-        <div class="item-details">
-          <h6>{{ item.name }}</h6>
-          <p>₡{{ item.price | number:'1.2-2' }}</p>
-          <div class="quantity-control">
-            <span>Cantidad:</span>
-            <input type="number" [(ngModel)]="item.quantity" (ngModelChange)="onQuantityChange(i)" min="1">
-          </div>
-        </div>
-        <div class="item-actions">
-          <button *ngIf="!item.quantityChanged" class="btn btn-sm btn-outline-secondary me-2" (click)="editItem(i)">
+    <div class="text-end">
+      <button type="button" class="btn-close" aria-label="Close" (click)="closeCart()"></button>
+      <small class="text-muted d-block mt-1"><span class="fw-bold">{{ totalItems }}</span> artículos</small>
+    </div>
+  </div>
+ 
+  <button routerLink="/checkout/shipping" class="btn btn-danger w-100 mb-3" (click)="closeCart()">Ir a Pagar</button>
+ 
+  <div class="cart-items">
+    <div *ngFor="let item of cartItems; let i = index" class="cart-item d-flex mb-3">
+      <img [src]="item.imageUrl" [alt]="item.name" class="item-image me-3">
+      <div class="item-details flex-grow-1">
+        <a routerLink="/product/product-detail" (click)="closeCart()">
+          <h6 class="mb-1 text-truncate" style="max-width: 200px;">{{ item.name }}</h6>
+        </a>
+        <p class="mb-1 fw-bold">₡{{ item.price | number:'1.0-0' }}</p>
+        <div class="d-flex align-items-center">
+          <small class="me-2">Cantidad:</small>
+          <input type="number" class="form-control form-control-sm me-2" style="width: 50px;" [(ngModel)]="item.quantity" (ngModelChange)="onQuantityChange(i)" min="1">
+          <button *ngIf="!item.quantityChanged" class="btn btn-sm btn-outline-secondary me-1 p-1" (click)="editItem(i)">
             <i class="fas fa-pencil-alt"></i>
           </button>
-          <button *ngIf="item.quantityChanged" class="btn btn-sm btn-outline-danger me-2" (click)="updateItem(i)">
+          <button *ngIf="item.quantityChanged" class="btn btn-sm btn-outline-danger me-1 p-1" (click)="updateItem(i)">
             Actualizar
           </button>
-          <button class="btn btn-sm btn-outline-danger" (click)="removeItem(i)">
+          <button class="btn btn-sm btn-outline-danger p-1" (click)="removeItem(i)">
             <i class="fas fa-times"></i>
           </button>
         </div>
       </div>
     </div>
-    
-    <a routerLink="/checkout/review" class="btn btn-outline-secondary w-100 mt-3">VER Y EDITAR CARRITO</a>
   </div>
+ 
+  <button routerLink="/checkout/review" class="btn btn-outline-secondary w-100 mt-3" (click)="closeCart()">VER Y EDITAR CARRITO</button>
+</div>
