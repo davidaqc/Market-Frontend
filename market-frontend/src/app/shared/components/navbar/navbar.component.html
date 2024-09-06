@@ -10,7 +10,7 @@
         <!-- Subcategories -->
         <div class="subcategories-wrapper position-absolute w-100" *ngIf="category === activeCategory">
           <div class="container-md" (mouseleave)="clearActiveCategory()">
-            <div class="row bg-white shadow-sm p-3">
+            <div class="row bg-white shadow-lg p-2">
               <div class="col-3 g-3" *ngFor="let subcategory of activeCategory.subcategories">
                 <a routerLink="/product/product-list" class="text-decoration-none text-dark" (click)="clearActiveCategory()">{{ subcategory }}</a>
               </div>
