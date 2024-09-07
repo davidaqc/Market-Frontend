@@ -1,40 +1,62 @@
-<div class="custom-border p-3">
+<div class="custom-border">
     <div class="container-fluid">
-        <div class="table-responsive">
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>Creado</th>
-                        <th>Nombre de Producto</th>
-                        <th>Valoración</th>
-                        <th>Calificación</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let product of products">
-                        <td>{{ product.createdDate }}</td>
-                        <td>
-                            <div class="text-truncate">
-                                <span class="text-danger">{{ product.name }}</span>
-                            </div>
-                        </td>
-                        <td>
-                            <ng-container *ngFor="let star of [1,2,3,4,5]">
-                                <i class="fas"
-                                    [ngClass]="{'fa-star': star <= product.rating, 'fa-star-o': star > product.rating}"
-                                    style="color: gold;"></i>
-                            </ng-container>
-                        </td>
-                        <td>
-                            <div class="text-truncate"> {{ product.review }} </div>
-                        </td>
-                        <td>
-                            <a href="#" class="text-danger">Ver información</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+
+        <div class="d-none d-md-block">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Creado</th>
+                            <th>Nombre de Producto</th>
+                            <th>Valoración</th>
+                            <th>Calificación</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let product of products">
+                            <td>{{ product.createdDate }}</td>
+                            <td>
+                                <div class="text-truncate">
+                                    <span class="text-danger"> {{ product.name.length > 20 ? (product.name | slice:0:20) + '...' : product.name }} </span>
+                                </div>
+                            </td>
+                            <td class="nowrap">
+                                <ng-container *ngFor="let star of [1,2,3,4,5]">
+                                    <i class="fas"
+                                        [ngClass]="{'fa-star': star <= product.rating, 'fa-star-o': star > product.rating}"
+                                        style="color: gold;"></i>
+                                </ng-container>
+                            </td>
+                            <td>
+                                <div class="text-truncate"> {{ product.review.length > 50 ? (product.review | slice:0:50) + '...' : product.review }} </div>
+                            </td>
+                            <td class="nowrap">
+                                <a href="#" class="text-danger">Ver información</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Versión de pantalla pequeña -->
+        <div class="d-md-none">
+            <div class="card mobile-card" *ngFor="let product of products">
+            <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-muted">Creado: {{ product.createdDate }}</h6>
+                <h5 class="card-title text-danger">{{ product.name }}</h5>
+                <p class="card-text">
+                <span class="text-warning">
+                    <ng-container *ngFor="let star of [1,2,3,4,5]">
+                    <i class="fas" [ngClass]="{'fa-star': star <= product.rating, 'fa-star-o': star > product.rating}"></i>
+                    </ng-container>
+                </span>
+                </p>
+                <p class="card-text">{{ product.review }}</p>
+                <a href="#" class="card-link text-danger">Ver información</a>
+            </div>
+            </div>
         </div>
 
         <!-- Items per page -->
