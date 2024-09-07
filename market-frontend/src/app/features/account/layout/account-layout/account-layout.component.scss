@@ -1,3 +1,12 @@
+.list-group a{
+    color: #777;
+}
+
+.list-group i{
+    font-size: 0.8rem;
+    margin-right: 10px;
+}
+
 .accordion-button:focus {
     box-shadow: none;
     outline: none;
@@ -7,4 +16,10 @@
     background-color: #f8f9fa;
     color: #343a40;
     border: 1px solid #c3cdd3;
+}
+
+.active {
+    background-color: #f0f0f0;
+    color: black !important;
+    border: none;
 }
