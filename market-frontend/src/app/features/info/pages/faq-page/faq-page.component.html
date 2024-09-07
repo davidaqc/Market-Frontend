@@ -20,10 +20,9 @@
                     débito y
                     aceptar.</li>
                 <li class="list-group-item">¡Listo! si tus datos de la tarjeta son correctos ya hiciste tu compra en
-                    Pequeño
-                    Mundo online.</li>
-                <li class="list-group-item">Para más información puedes ingresar a los <a href="#"
-                        class="text-danger">términos y condiciones</a>.</li>
+                    Mundo Alegre online.</li>
+                <li class="list-group-item">Para más información puedes ingresar a los <a
+                        routerLink="/info/terms-and-conditions" class="text-danger">términos y condiciones</a>.</li>
             </ol>
         </div>
 
@@ -36,8 +35,8 @@
                     zonas de Puntarenas, Orotina, Guápiles, Limón, Liberia, La Cruz, Playas del Coco y Pérez Zeledón.
                 </li>
             </ul>
-            <p>Puedes verificar el área de cobertura de la empresa Moovin haciendo click <a href="#"
-                    class="text-danger">aquí</a>.</p>
+            <p>Puedes verificar el área de cobertura de la empresa Moovin haciendo click <a
+                    href="https://www.moovin.me/" target="_blank" class="text-danger">aquí</a>.</p>
         </div>
 
         <div class="mb-5">
@@ -169,14 +168,16 @@
         <div class="mb-5">
             <h2 class="h4 mb-3">¿Cómo funciona la garantía?</h2>
             <p>El período de garantía será de cuarenta y cinco (45) días naturales, iniciando a partir de la fecha de la
-                compra del producto. Para más información visite las <a href="#" class="text-danger">políticas de
+                compra del producto. Para más información visite las <a [routerLink]="['/info/terms-and-conditions']"
+                    fragment="politicas-de-garantia" target="_blank" class="text-danger">políticas de
                     garantía</a>.
             </p>
         </div>
 
         <div class="mb-5">
             <h2 class="h4 mb-3">¿Puedo devolver el pedido completo o alguno de los productos?</h2>
-            <p>Si puedes devolver el pedido completo o alguno de los productos. Visitá las <a href="#"
+            <p>Si puedes devolver el pedido completo o alguno de los productos. Visitá las <a
+                    [routerLink]="['/info/terms-and-conditions']" fragment="politicas-de-devolucion" target="_blank"
                     class="text-danger">políticas de devolución y/o reintegro de dinero</a> para conocer a detalle el
                 proceso.
             </p>
