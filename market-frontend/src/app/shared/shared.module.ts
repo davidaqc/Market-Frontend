@@ -42,7 +42,8 @@ import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.componen
     FooterComponent,
     WarningAlertComponent,
     SucessAlertComponent,
-    ConfirmationModalComponent
+    ConfirmationModalComponent,
+    BreadcrumbComponent
   ]
 })
 export class SharedModule { }
