@@ -4,7 +4,7 @@ import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
   selector: 'app-sort-options',
   template: `
     <div>
-      <span>Ordenar por</span>
+      <span class="fw-bold">Ordenar por</span>
       <select [(ngModel)]="selectedSort" (ngModelChange)="onSortChange()" class="form-select d-inline-block w-auto ms-2">
         <option *ngFor="let option of sortOptions" [value]="option">{{ option }}</option>
       </select>
