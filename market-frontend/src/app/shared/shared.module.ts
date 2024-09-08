@@ -12,6 +12,7 @@ import { ShoppingCartSummaryComponent } from './components/header/shopping-cart-
 import { AutocompleteSearchComponent } from './components/header/autocomplete-search/autocomplete-search.component';
 import { WarningAlertComponent } from './components/warning-alert/warning-alert.component';
 import { SucessAlertComponent } from './components/sucess-alert/sucess-alert.component';
+import { ConfirmationModalComponent } from './components/confirmation-modal/confirmation-modal.component';
 
 
 
@@ -24,7 +25,8 @@ import { SucessAlertComponent } from './components/sucess-alert/sucess-alert.com
     ShoppingCartSummaryComponent,
     AutocompleteSearchComponent,
     WarningAlertComponent,
-    SucessAlertComponent
+    SucessAlertComponent,
+    ConfirmationModalComponent
   ],
   imports: [
     CommonModule,
