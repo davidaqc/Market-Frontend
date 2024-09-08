@@ -1,7 +1,7 @@
 <!-- General Layout-->
 <app-header></app-header>
 <app-navbar></app-navbar>
-<main class="mt-3">
+<main [ngClass]="{'mt-5': true, 'mb-5': !isHomeRoute()}">
   <router-outlet></router-outlet>
 </main>
 <app-footer></app-footer>

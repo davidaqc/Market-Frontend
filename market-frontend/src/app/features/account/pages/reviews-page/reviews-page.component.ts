@@ -18,11 +18,11 @@ export class ReviewsPageComponent {
       createdDate: '1/8/24',
       name: 'Aceite aguacate Mueloliva 1lt',
       rating: 5,
-      review: 'Excelente precio!!! El servicio es buenisimo!'
+      review: 'Excelente precio!!! El servicio es buenisimo! El servicio es buenisimo! x2'
     },
     {
       createdDate: '1/8/24',
-      name: 'Aceite aguacate Mueloliva 1lt',
+      name: 'Aceite aguacate',
       rating: 3,
       review: 'Excelente precio!!!'
     },
