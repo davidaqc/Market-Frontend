@@ -1,58 +1,54 @@
-<div class="custom-border">
-    <div class="container-fluid">
-        <div class="form-container">
-            <form>
-                <div class="row">
-                    <div class="col-md-6">
-                        <h5 class="text-danger">INFORMACIÓN DE LA CUENTA</h5>
-                        <div class="mb-3">
-                            <label for="nombre" class="form-label">Nombre *</label>
-                            <input type="text" class="form-control" id="nombre" [(ngModel)]="nombre" name="nombre" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="apellido" class="form-label">Apellido *</label>
-                            <input type="text" class="form-control" id="apellido" [(ngModel)]="apellido" name="apellido" required>
-                        </div>
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="cambiarCorreo" [(ngModel)]="cambiarCorreo" name="cambiarCorreo">
-                            <label class="form-check-label" for="cambiarCorreo">Cambiar correo electrónico</label>
-                        </div>
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="cambiarContrasena" [(ngModel)]="cambiarContrasena" name="cambiarContrasena">
-                            <label class="form-check-label" for="cambiarContrasena">Cambiar contraseña</label>
-                        </div>
+<div class="form-container">
+    <form>
+        <div class="row">
+            <div class="col-md-6">
+                <h5 class="text-danger">INFORMACIÓN DE LA CUENTA</h5>
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre *</label>
+                    <input type="text" class="form-control" id="nombre" [(ngModel)]="nombre" name="nombre" required>
+                </div>
+                <div class="mb-3">
+                    <label for="apellido" class="form-label">Apellido *</label>
+                    <input type="text" class="form-control" id="apellido" [(ngModel)]="apellido" name="apellido" required>
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="cambiarCorreo" [(ngModel)]="cambiarCorreo" name="cambiarCorreo">
+                    <label class="form-check-label" for="cambiarCorreo">Cambiar correo electrónico</label>
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="cambiarContrasena" [(ngModel)]="cambiarContrasena" name="cambiarContrasena">
+                    <label class="form-check-label" for="cambiarContrasena">Cambiar contraseña</label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h5 class="text-danger">
+                    <ng-container *ngIf="cambiarCorreo && !cambiarContrasena">CAMBIAR CORREO ELECTRÓNICO</ng-container>
+                    <ng-container *ngIf="!cambiarCorreo && cambiarContrasena">CAMBIAR CONTRASEÑA</ng-container>
+                    <ng-container *ngIf="cambiarCorreo && cambiarContrasena">CAMBIO DE EMAIL Y CONTRASEÑA</ng-container>
+                </h5>
+                <div *ngIf="cambiarCorreo" class="mb-3">
+                    <label for="correo" class="form-label">Correo electrónico *</label>
+                    <input type="email" class="form-control" id="correo" [(ngModel)]="correo" name="correo" required>
+                </div>
+                <div *ngIf="cambiarContrasena">
+                    <div class="mb-3">
+                        <label for="contrasenaActual" class="form-label">Contraseña actual *</label>
+                        <input type="password" class="form-control" id="contrasenaActual" name="contrasenaActual" required>
                     </div>
-                    <div class="col-md-6">
-                        <h5 class="text-danger">
-                            <ng-container *ngIf="cambiarCorreo && !cambiarContrasena">CAMBIAR CORREO ELECTRÓNICO</ng-container>
-                            <ng-container *ngIf="!cambiarCorreo && cambiarContrasena">CAMBIAR CONTRASEÑA</ng-container>
-                            <ng-container *ngIf="cambiarCorreo && cambiarContrasena">CAMBIO DE EMAIL Y CONTRASEÑA</ng-container>
-                        </h5>
-                        <div *ngIf="cambiarCorreo" class="mb-3">
-                            <label for="correo" class="form-label">Correo electrónico *</label>
-                            <input type="email" class="form-control" id="correo" [(ngModel)]="correo" name="correo" required>
-                        </div>
-                        <div *ngIf="cambiarContrasena">
-                            <div class="mb-3">
-                                <label for="contrasenaActual" class="form-label">Contraseña actual *</label>
-                                <input type="password" class="form-control" id="contrasenaActual" name="contrasenaActual" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="nuevaContrasena" class="form-label">Nueva contraseña *</label>
-                                <input type="password" class="form-control" id="nuevaContrasena" name="nuevaContrasena" required>
-                                <div class="form-text">Fuerza de la contraseña: Sin contraseña</div>
-                            </div>
-                            <div class="mb-3">
-                                <label for="confirmarContrasena" class="form-label">Confirmar contraseña nueva *</label>
-                                <input type="password" class="form-control" id="confirmarContrasena" name="confirmarContrasena" required>
-                            </div>
-                        </div>
+                    <div class="mb-3">
+                        <label for="nuevaContrasena" class="form-label">Nueva contraseña *</label>
+                        <input type="password" class="form-control" id="nuevaContrasena" name="nuevaContrasena" required>
+                        <div class="form-text">Fuerza de la contraseña: Sin contraseña</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirmarContrasena" class="form-label">Confirmar contraseña nueva *</label>
+                        <input type="password" class="form-control" id="confirmarContrasena" name="confirmarContrasena" required>
                     </div>
                 </div>
-                <div class="mt-3">
-                    <button type="submit" class="btn btn-danger btn-guardar">Guardar</button>
-                </div>
-            </form>
+            </div>
         </div>
-    </div>
-  </div>
+        <div class="mt-3">
+            <button type="submit" class="btn btn-danger btn-guardar">Guardar</button>
+        </div>
+    </form>
+</div>
