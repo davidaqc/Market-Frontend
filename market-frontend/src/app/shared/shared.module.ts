@@ -11,6 +11,7 @@ import { OffcanvasMenuComponent } from './components/header/offcanvas-menu/offca
 import { ShoppingCartSummaryComponent } from './components/header/shopping-cart-summary/shopping-cart-summary.component';
 import { AutocompleteSearchComponent } from './components/header/autocomplete-search/autocomplete-search.component';
 import { WarningAlertComponent } from './components/warning-alert/warning-alert.component';
+import { SucessAlertComponent } from './components/sucess-alert/sucess-alert.component';
 
 
 
@@ -22,7 +23,8 @@ import { WarningAlertComponent } from './components/warning-alert/warning-alert.
     OffcanvasMenuComponent,
     ShoppingCartSummaryComponent,
     AutocompleteSearchComponent,
-    WarningAlertComponent
+    WarningAlertComponent,
+    SucessAlertComponent
   ],
   imports: [
     CommonModule,
@@ -34,7 +36,8 @@ import { WarningAlertComponent } from './components/warning-alert/warning-alert.
     HeaderComponent,
     NavbarComponent,
     FooterComponent,
-    WarningAlertComponent
+    WarningAlertComponent,
+    SucessAlertComponent
   ]
 })
 export class SharedModule { }
