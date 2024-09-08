@@ -39,3 +39,9 @@
  
   <button routerLink="/checkout/review" class="btn btn-outline-secondary w-100 mt-3" (click)="closeCart()">VER Y EDITAR CARRITO</button>
 </div>
+
+<app-confirmation-modal
+  [isVisible]="showModal"
+  (confirm)="onConfirm()"
+  (cancel)="onCancel()">
+</app-confirmation-modal>

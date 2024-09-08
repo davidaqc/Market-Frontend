@@ -39,7 +39,8 @@ import { ConfirmationModalComponent } from './components/confirmation-modal/conf
     NavbarComponent,
     FooterComponent,
     WarningAlertComponent,
-    SucessAlertComponent
+    SucessAlertComponent,
+    ConfirmationModalComponent
   ]
 })
 export class SharedModule { }

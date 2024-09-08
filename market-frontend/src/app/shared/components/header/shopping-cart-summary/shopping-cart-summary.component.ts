@@ -8,6 +8,7 @@ import { CartItem } from '../../../../core/models/cart-item.model';
 })
 export class ShoppingCartSummaryComponent {
 
+  showModal = false;
   @Output() close = new EventEmitter<void>();
 
   cartItems: CartItem[] = [
@@ -27,7 +28,16 @@ export class ShoppingCartSummaryComponent {
   }
 
   removeItem(index: number): void {
-    this.cartItems.splice(index, 1);
+    this.showModal = true;
+    //this.cartItems.splice(index, 1);
+  }
+
+  onConfirm() {
+    this.showModal = false;
+  }
+  
+  onCancel() {
+    this.showModal = false;
   }
 
   editItem(index: number): void {
