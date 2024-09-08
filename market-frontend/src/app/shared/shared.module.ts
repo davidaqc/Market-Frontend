@@ -13,6 +13,7 @@ import { AutocompleteSearchComponent } from './components/header/autocomplete-se
 import { WarningAlertComponent } from './components/warning-alert/warning-alert.component';
 import { SucessAlertComponent } from './components/sucess-alert/sucess-alert.component';
 import { ConfirmationModalComponent } from './components/confirmation-modal/confirmation-modal.component';
+import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
 
 
 
@@ -26,7 +27,8 @@ import { ConfirmationModalComponent } from './components/confirmation-modal/conf
     AutocompleteSearchComponent,
     WarningAlertComponent,
     SucessAlertComponent,
-    ConfirmationModalComponent
+    ConfirmationModalComponent,
+    BreadcrumbComponent
   ],
   imports: [
     CommonModule,
