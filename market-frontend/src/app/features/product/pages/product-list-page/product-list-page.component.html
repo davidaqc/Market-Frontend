@@ -1,95 +1,61 @@
 <div class="container-fluid container-md mt-5">
-    <app-breadcrumb [items]="[
-        {label: 'Hogar', url: '/product/product-detail'},
-        {label: 'Adornos y decoración', url: '/product/product-detail'}
-    ]"></app-breadcrumb>
-
+    <app-breadcrumb [items]="breadcrumbItems"></app-breadcrumb>
+  
     <div class="row">
-        <!-- Left column - Price filter -->
-        <div class="col-lg-3 mb-4">
-            <div class="card">
-                <div class="card-header" (click)="togglePriceFilter()">
-                    <h5 class="mb-0">
-                        Precio 
-                        <i class="fas" [ngClass]="{'fa-chevron-down': !isPriceFilterExpanded, 'fa-chevron-up': isPriceFilterExpanded}"></i>
-                    </h5>
-                </div>
-                <div class="card-body" [ngClass]="{'d-none': !isPriceFilterExpanded}">
-                    <ul class="list-unstyled">
-                        <li *ngFor="let range of priceRanges">
-                            <a href="#" class="text-decoration-none">{{ range.range }} ({{ range.count }})</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+      <!-- Left column - Price filter -->
+      <div class="col-lg-3 mb-4">
+        <app-price-filter 
+          [priceRanges]="priceRanges" 
+          (filterChange)="onPriceFilterChange($event)">
+        </app-price-filter>
+      </div>
+  
+      <!-- Right column - Product list -->
+      <div class="col-lg-9">
+        <!-- Sort and Show options -->
+        <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
+          <app-sort-options 
+            [sortOptions]="sortOptions"
+            [defaultSort]="defaultSort"
+            (sortChange)="onSortChange($event)">
+          </app-sort-options>
+          <app-items-per-page
+            [itemsPerPageOptions]="itemsPerPageOptions"
+            [defaultItemsPerPage]="itemsPerPage"
+            (itemsPerPageChange)="onItemsPerPageChange($event)" 
+            class="d-none d-md-block">
+          </app-items-per-page>
         </div>
-
-        <!-- Right column - Product list -->
-        <div class="col-lg-9">
-            <!-- Sort and Show options -->
-            <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
-                <div class="mb-2 mb-md-0">
-                    <span>Ordenar por</span>
-                    <select [(ngModel)]="selectedSort" class="form-select d-inline-block w-auto ms-2">
-                        <option *ngFor="let option of sortOptions">{{ option }}</option>
-                    </select>
-                </div>
-                <div>
-                    <span>Mostrar</span>
-                    <select [(ngModel)]="itemsPerPage" class="form-select d-inline-block w-auto ms-2">
-                        <option>12</option>
-                        <option>24</option>
-                        <option>36</option>
-                    </select>
-                </div>
-            </div>
-
-            <!-- Product grid -->
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
-                <div class="col" *ngFor="let product of products">
-                    <div class="card h-100">
-                        <img [src]="product.imageUrl" class="card-img-top" [alt]="product.name">
-                        <div class="card-body">
-                            <h5 class="card-title text-truncate">{{ product.name }}</h5>
-                            <p class="card-text">
-                                <ng-container *ngFor="let star of [1,2,3,4,5]">
-                                    <i class="far fa-star"></i>
-                                </ng-container>
-                            </p>
-                            <p class="card-text">₡{{ product.price.toFixed(2) }}</p>
-                            <a routerLink="/product/product-detail" class="btn btn-danger w-100" (click)="addToCart(product)">Agregar al Carrito</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Pagination -->
-            <div class="d-flex flex-wrap justify-content-between align-items-center mt-4">
-                <div class="mb-2 mb-md-0">
-                    <span>Ordenar por</span>
-                    <select [(ngModel)]="selectedSort" class="form-select d-inline-block w-auto ms-2">
-                        <option *ngFor="let option of sortOptions">{{ option }}</option>
-                    </select>
-                </div>
-                <div class="mb-2 mb-md-0">
-                    <span>Mostrar</span>
-                    <select [(ngModel)]="itemsPerPage" class="form-select d-inline-block w-auto ms-2">
-                        <option>12</option>
-                        <option>24</option>
-                        <option>36</option>
-                    </select>
-                </div>
-                <nav aria-label="Page navigation" class="mt-2 mt-md-0">
-                    <ul class="pagination mb-0">
-                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#">4</a></li>
-                        <li class="page-item"><a class="page-link" href="#">5</a></li>
-                        <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
-                    </ul>
-                </nav>
-            </div>
+  
+        <!-- Product grid -->
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+          <div class="col" *ngFor="let product of products">
+            <app-product-card 
+              [product]="product"
+              (addToCart)="onAddToCart($event)">
+            </app-product-card>
+          </div>
         </div>
+  
+        <!-- Pagination -->
+        <div class="d-flex flex-wrap justify-content-between align-items-center mt-4">
+            <app-sort-options 
+                [sortOptions]="sortOptions"
+                [defaultSort]="defaultSort"
+                (sortChange)="onSortChange($event)"
+                class="mb-2 mt-md-0">
+            </app-sort-options>
+            <app-items-per-page
+                [itemsPerPageOptions]="itemsPerPageOptions"
+                [defaultItemsPerPage]="itemsPerPage"
+                (itemsPerPageChange)="onItemsPerPageChange($event)">
+            </app-items-per-page>
+            <app-pagination 
+                [currentPage]="currentPage"
+                [totalPages]="totalPages"
+                (pageChange)="onPageChange($event)">
+            </app-pagination>
+        </div>
+      </div>
     </div>
-</div>
+  </div>

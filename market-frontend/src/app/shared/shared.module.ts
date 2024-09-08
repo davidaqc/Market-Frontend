@@ -14,6 +14,9 @@ import { WarningAlertComponent } from './components/warning-alert/warning-alert.
 import { SucessAlertComponent } from './components/sucess-alert/sucess-alert.component';
 import { ConfirmationModalComponent } from './components/confirmation-modal/confirmation-modal.component';
 import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
+import { SortOptionsComponent } from './components/sort-options/sort-options.component';
+import { ItemsPerPageComponent } from './components/items-per-page/items-per-page.component';
+import { PaginationComponent } from './components/pagination/pagination.component';
 
 
 
@@ -28,7 +31,10 @@ import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.componen
     WarningAlertComponent,
     SucessAlertComponent,
     ConfirmationModalComponent,
-    BreadcrumbComponent
+    BreadcrumbComponent,
+    SortOptionsComponent,
+    ItemsPerPageComponent,
+    PaginationComponent
   ],
   imports: [
     CommonModule,
@@ -43,7 +49,10 @@ import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.componen
     WarningAlertComponent,
     SucessAlertComponent,
     ConfirmationModalComponent,
-    BreadcrumbComponent
+    BreadcrumbComponent,
+    SortOptionsComponent,
+    ItemsPerPageComponent,
+    PaginationComponent
   ]
 })
 export class SharedModule { }

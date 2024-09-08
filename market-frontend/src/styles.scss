@@ -1,6 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
 
 $danger: #cc0000;
+
+// Customizing pagination styles
+$pagination-color:                  $danger;
+$pagination-bg:                     #fff;
+
+$pagination-hover-color:            #fff;
+$pagination-hover-bg:               $danger;
+$pagination-hover-border-color:     $danger;
+
+$pagination-active-color:           #fff;
+$pagination-active-bg:              $danger;
+$pagination-active-border-color:    $danger;
+
+$pagination-focus-color:           #fff;
+$pagination-focus-bg:              $danger;
+$pagination-focus-border-color:    $danger;
+$pagination-focus-box-shadow:      0;
+
 @import "bootstrap/scss/bootstrap";
 
 :root {
