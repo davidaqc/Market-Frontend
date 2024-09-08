@@ -10,9 +10,9 @@
     </div>
   </div>
  
-  <button routerLink="/checkout/shipping" class="btn btn-danger w-100 mb-3" (click)="closeCart()">Ir a Pagar</button>
+  <button *ngIf="cartItems.length > 0" routerLink="/checkout/shipping" class="btn btn-danger w-100 mb-3" (click)="closeCart()">Ir a Pagar</button>
  
-  <div class="cart-items">
+  <div *ngIf="cartItems.length > 0" class="cart-items">
     <div *ngFor="let item of cartItems; let i = index" class="cart-item d-flex mb-3">
       <img [src]="item.imageUrl" [alt]="item.name" class="item-image me-3">
       <div class="item-details flex-grow-1">
@@ -37,5 +37,16 @@
     </div>
   </div>
  
-  <button routerLink="/checkout/review" class="btn btn-outline-secondary w-100 mt-3" (click)="closeCart()">VER Y EDITAR CARRITO</button>
+  <div *ngIf="cartItems.length === 0" class="empty-cart-message text-center py-5">
+    <i class="fas fa-shopping-cart fa-3x mb-3 text-muted"></i>
+    <p class="mb-0">No tenés ningún artículo en el carrito de compras.</p>
+  </div>
+ 
+  <button *ngIf="cartItems.length > 0" routerLink="/checkout/review" class="btn btn-outline-secondary w-100 mt-3" (click)="closeCart()">VER Y EDITAR CARRITO</button>
 </div>
+
+<app-confirmation-modal
+  [isVisible]="showModal"
+  (confirm)="onConfirm()"
+  (cancel)="onCancel()">
+</app-confirmation-modal>

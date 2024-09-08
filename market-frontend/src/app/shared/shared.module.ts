@@ -10,7 +10,10 @@ import { FooterComponent } from './components/footer/footer.component';
 import { OffcanvasMenuComponent } from './components/header/offcanvas-menu/offcanvas-menu.component';
 import { ShoppingCartSummaryComponent } from './components/header/shopping-cart-summary/shopping-cart-summary.component';
 import { AutocompleteSearchComponent } from './components/header/autocomplete-search/autocomplete-search.component';
-import { AlertComponent } from './components/alert/alert.component';
+import { WarningAlertComponent } from './components/warning-alert/warning-alert.component';
+import { SucessAlertComponent } from './components/sucess-alert/sucess-alert.component';
+import { ConfirmationModalComponent } from './components/confirmation-modal/confirmation-modal.component';
+import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
 
 
 
@@ -22,7 +25,10 @@ import { AlertComponent } from './components/alert/alert.component';
     OffcanvasMenuComponent,
     ShoppingCartSummaryComponent,
     AutocompleteSearchComponent,
-    AlertComponent
+    WarningAlertComponent,
+    SucessAlertComponent,
+    ConfirmationModalComponent,
+    BreadcrumbComponent
   ],
   imports: [
     CommonModule,
@@ -34,7 +40,10 @@ import { AlertComponent } from './components/alert/alert.component';
     HeaderComponent,
     NavbarComponent,
     FooterComponent,
-    AlertComponent
+    WarningAlertComponent,
+    SucessAlertComponent,
+    ConfirmationModalComponent,
+    BreadcrumbComponent
   ]
 })
 export class SharedModule { }

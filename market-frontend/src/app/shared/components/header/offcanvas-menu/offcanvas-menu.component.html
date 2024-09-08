@@ -19,7 +19,7 @@
               </h2>
               <div [id]="category.id" class="accordion-collapse collapse" data-bs-parent="#menuAccordion">
                 <div class="accordion-body">
-                  <a href="#" class="nav-link" *ngFor="let subcategory of category.subcategories">{{ subcategory }}</a>
+                  <a routerLink="/product/product-list" class="nav-link" *ngFor="let subcategory of category.subcategories">{{ subcategory }}</a>
                 </div>
               </div>
             </div>

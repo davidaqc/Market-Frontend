@@ -1,10 +1,10 @@
 <div class="search-results-popover" (click)="$event.stopPropagation()">
   <div class="d-flex justify-content-between align-items-center py-2 bg-color">
     <h5 class="mb-0 ms-3">Productos</h5>
-    <a routerLink="/product/product-list" class="me-3" (click)="closeSearchResults()">Ver todos {{ products.length }}</a>
+    <a *ngIf="showResults" routerLink="/product/product-list" class="me-3" (click)="closeSearchResults()">Ver todos {{ products.length }}</a>
   </div>
   
-  <div class="search-items pt-3">
+  <div *ngIf="showResults" class="search-items pt-3">
     <div *ngFor="let product of products" class="d-flex mb-3 pb-3 border-bottom mx-2">
       <img [src]="product.image" [alt]="product.name" class="product-image me-2">
       <div class="product-info">
@@ -17,5 +17,9 @@
         </div>
       </div>
     </div>
+  </div>
+  
+  <div *ngIf="!showResults" class="no-results p-3 text-center">
+    <p class="mb-0">¡Lo sentimos, no se encontraron resultados!</p>
   </div>
 </div>
