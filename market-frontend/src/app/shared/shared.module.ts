@@ -10,7 +10,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { OffcanvasMenuComponent } from './components/header/offcanvas-menu/offcanvas-menu.component';
 import { ShoppingCartSummaryComponent } from './components/header/shopping-cart-summary/shopping-cart-summary.component';
 import { AutocompleteSearchComponent } from './components/header/autocomplete-search/autocomplete-search.component';
-import { AlertComponent } from './components/alert/alert.component';
+import { WarningAlertComponent } from './components/warning-alert/warning-alert.component';
 
 
 
@@ -22,7 +22,7 @@ import { AlertComponent } from './components/alert/alert.component';
     OffcanvasMenuComponent,
     ShoppingCartSummaryComponent,
     AutocompleteSearchComponent,
-    AlertComponent
+    WarningAlertComponent
   ],
   imports: [
     CommonModule,
@@ -34,7 +34,7 @@ import { AlertComponent } from './components/alert/alert.component';
     HeaderComponent,
     NavbarComponent,
     FooterComponent,
-    AlertComponent
+    WarningAlertComponent
   ]
 })
 export class SharedModule { }
