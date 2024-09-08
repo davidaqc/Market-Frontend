@@ -9,6 +9,8 @@ import { AutocompleteItem } from '../../../../core/models/autocomplete-item.mode
 export class AutocompleteSearchComponent {
   @Output() close = new EventEmitter<void>();
 
+  showResults: boolean = true; 
+  
   products: AutocompleteItem[] = [
     {
       name: 'Taza doble pared vidrio 8oz 2unds',
