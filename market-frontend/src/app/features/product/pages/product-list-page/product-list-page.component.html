@@ -22,7 +22,8 @@
           <app-items-per-page
             [itemsPerPageOptions]="itemsPerPageOptions"
             [defaultItemsPerPage]="itemsPerPage"
-            (itemsPerPageChange)="onItemsPerPageChange($event)">
+            (itemsPerPageChange)="onItemsPerPageChange($event)" 
+            class="d-none d-md-block">
           </app-items-per-page>
         </div>
   
@@ -41,7 +42,8 @@
             <app-sort-options 
                 [sortOptions]="sortOptions"
                 [defaultSort]="defaultSort"
-                (sortChange)="onSortChange($event)">
+                (sortChange)="onSortChange($event)"
+                class="mb-2 mt-md-0">
             </app-sort-options>
             <app-items-per-page
                 [itemsPerPageOptions]="itemsPerPageOptions"

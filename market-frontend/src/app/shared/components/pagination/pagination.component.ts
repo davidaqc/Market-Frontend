@@ -3,7 +3,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-pagination',
   template: `
-    <nav aria-label="Page navigation" class="mt-2 mt-md-0">
+    <nav aria-label="Page navigation">
       <ul class="pagination mb-0">
         <li class="page-item" [class.disabled]="currentPage === 1">
           <a class="page-link" href="#" (click)="changePage(currentPage - 1, $event)">&laquo;</a>
