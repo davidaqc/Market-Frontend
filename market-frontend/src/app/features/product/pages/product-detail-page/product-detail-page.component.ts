@@ -15,8 +15,8 @@ export class ProductDetailPageComponent implements OnInit {
     price: 9800.0,
     availability: 'Disponible',
     sku: '07221053',
-    mainImage: 'assets/images/canasta.jpg',
     images: [
+      'assets/images/canasta.jpg',
       'assets/images/candelas.jpg',
       'assets/images/hamaca_asiento_cojin.jpg',
       'assets/images/hamaca_tela_rayas.jpg',
@@ -46,10 +46,6 @@ export class ProductDetailPageComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
-
-  changeMainImage(newImage: string): void {
-    this.product.mainImage = newImage;
-  }
 
   onQuantityChange(newQuantity: number): void {
     this.quantity = newQuantity;
