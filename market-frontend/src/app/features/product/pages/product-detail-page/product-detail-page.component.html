@@ -1,120 +1,53 @@
-<div class="container-fluid container-md mt-5">
+<div class="container-fluid container-md">
+
+    <app-breadcrumb [items]="breadcrumbItems"></app-breadcrumb>
+
     <div class="row">
-        <div class="col-md-6 mb-4">
-            <!-- Main product image -->
-            <div class="border p-2 mb-3">
-                <img [src]="product.mainImage" alt="{{product.name}}" class="img-fluid">
-            </div>
 
-            <!-- Thumbnail images -->
-            <div class="d-flex justify-content-start flex-wrap">
-                <div *ngFor="let img of product.images" class="border p-1 m-1" style="width: 70px; height: 70px;">
-                    <img [src]="img" alt="Thumbnail" class="img-fluid"
-                        style="cursor: pointer; object-fit: cover; width: 100%; height: 100%;"
-                        (click)="changeMainImage(img)">
-                </div>
-            </div>
+      <!-- Product Images -->
+      <div class="col-md-5 mb-4">
+        <app-product-images [product]="product"></app-product-images>
+      </div>
+
+      <div class="col-md-7">
+
+        <!-- Product Info -->
+        <app-product-info [product]="product"></app-product-info>
+        
+        <!-- Quantity selector, Add to cart and Add to wishlist buttons -->
+        <div class="d-flex align-items-center mt-3">
+          <app-quantity-selector 
+            [quantity]="quantity" 
+            (quantityChange)="onQuantityChange($event)"
+          ></app-quantity-selector>
+
+          <button class="btn btn-danger ms-3" (click)="addToCart()">Agregar al Carrito</button>
+          <button class="btn btn-danger ms-2">
+            <i class="fa fa-heart"></i>
+          </button>
         </div>
-        <div class="col-md-6">
-            <h2>{{product.name}}</h2>
 
-            <!-- Ratings -->
-            <div class="mb-3">
-                <i *ngFor="let star of [1,2,3,4,5]" class="fa fa-star"
-                    [class.text-warning]="star <= product.rating"></i>
-                <span class="ml-2 text-muted">{{product.numReviews}} reviews</span>
-            </div>
-
-            <p>{{product.description}}</p>
-            <hr>
-
-            <p class="h3">{{product.price | currency}}</p>
-
-            <p>Availability: <span class="text-success">{{product.availability}}</span></p>
-            <p>SKU: {{product.sku}}</p>
-
-            <!-- Quantity selector -->
-            <div class="form-group">
-                <label for="quantity">Quantity:</label>
-                <div class="input-group" style="max-width: 150px;">
-                    <div class="input-group-prepend">
-                        <button class="btn btn-outline-secondary" type="button" (click)="decreaseQuantity()">-</button>
-                    </div>
-                    <input type="text" id="quantity" class="form-control text-center" [value]="quantity">
-                    <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="button" (click)="increaseQuantity()">+</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Add to cart button -->
-            <button class="btn btn-danger mt-3" (click)="addToCart()">Add to Cart</button>
-
-            <!-- Wishlist button -->
-            <button class="btn btn-danger mt-3 ml-2">
-                <i class="fa fa-heart"></i>
-            </button>
-        </div>
+      </div>
     </div>
 
-    <!-- Product Details and Ratings Section -->
+    <!-- Product Details and Ratings -->
     <div class="mt-5">
-        <ul class="nav nav-tabs">
-            <li class="nav-item">
-                <a class="nav-link" [class.active]="activeTab === 'details'" (click)="activeTab = 'details'">Detalles de
-                    producto</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" [class.active]="activeTab === 'ratings'"
-                    (click)="activeTab = 'ratings'">Calificaciones</a>
-            </li>
-        </ul>
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link" [class.active]="activeTab === 'details'" (click)="activeTab = 'details'">Detalles de producto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [class.active]="activeTab === 'ratings'" (click)="activeTab = 'ratings'">Calificaciones</a>
+        </li>
+      </ul>
 
-        <div class="tab-content mt-3 px-5">
-
-            <!-- Product Details -->
-            <div *ngIf="activeTab === 'details'">
-                <ul class="list-unstyled">
-                    <li *ngFor="let detail of productDetails">
-                        • {{ detail.label }}: {{ detail.value }}
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Ratings Section -->
-            <div *ngIf="activeTab === 'ratings'">
-                <h5 class="text-danger">ESTÁS REVISANDO:</h5>
-                <h6>CANASTA LAVANDERÍA CON TAPA MIMBRE 38X27X47CM</h6>
-
-                <div class="form-group mt-3">
-                    <label>Su calificación *</label>
-                    <div class="mt-3 rating">
-                        <span *ngFor="let star of stars; let i = index" (click)="setRating(i + 1)"
-                            (mouseover)="currentHover(i + 1)" (mouseleave)="resetHover()" class="star"
-                            [class.filled]="i < (hoveredRating || rating)">
-                            ★
-                        </span>
-                    </div>
-                </div>
-
-                <div class="form-group mt-3">
-                    <label for="apodo">Apodo *</label>
-                    <input type="text" id="apodo" class="form-control" placeholder="David">
-                </div>
-
-                <div class="form-group mt-3">
-                    <label for="resumen">Resumen *</label>
-                    <input type="text" id="resumen" class="form-control">
-                </div>
-
-                <div class="form-group mt-3">
-                    <label for="calificacion">Calificación *</label>
-                    <textarea id="calificacion" class="form-control" rows="4"></textarea>
-                </div>
-
-                <button class="btn btn-danger mt-3">Calificar</button>
-            </div>
+      <div class="tab-content mt-3 px-5">
+        <div *ngIf="activeTab === 'details'">
+          <app-product-details-tab [product]="product"></app-product-details-tab>
         </div>
+        <div *ngIf="activeTab === 'ratings'">
+          <app-product-ratings-tab [product]="product"></app-product-ratings-tab>
+        </div>
+      </div>
     </div>
-
 </div>
