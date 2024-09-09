@@ -8,7 +8,9 @@
     <div *ngFor="let product of products" class="d-flex mb-3 pb-3 border-bottom mx-2">
       <img [src]="product.image" [alt]="product.name" class="product-image me-2">
       <div class="product-info">
-        <a routerLink="/product/product-detail" class="mb-1 text-truncate" (click)="closeSearchResults()">{{ product.name }}</a>
+        <a routerLink="/product/product-detail" (click)="closeSearchResults()">
+          <h6 class="mb-1 text-truncate" style="max-width: 200px;">{{ product.name }}</h6>
+        </a>
         <p class="mb-1 small text-muted">SKU: {{ product.sku }}</p>
         <p class="mb-1 small description-two-lines">{{ product.description }}</p>
         <div class="d-flex justify-content-between align-items-center">
