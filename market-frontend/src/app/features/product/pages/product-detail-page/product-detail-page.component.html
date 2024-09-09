@@ -3,24 +3,34 @@
     <app-breadcrumb [items]="breadcrumbItems"></app-breadcrumb>
 
     <div class="row">
-      <div class="col-md-6 mb-4">
+
+      <!-- Product Images -->
+      <div class="col-md-5 mb-4">
         <app-product-images [product]="product" (changeMainImage)="changeMainImage($event)"></app-product-images>
       </div>
-      <div class="col-md-6">
+
+      <div class="col-md-7">
+
+        <!-- Product Info -->
         <app-product-info [product]="product"></app-product-info>
         
-        <app-quantity-selector 
-          [quantity]="quantity" 
-          (quantityChange)="onQuantityChange($event)"
-        ></app-quantity-selector>
+        <!-- Quantity selector, Add to cart and Add to wishlist buttons -->
+        <div class="d-flex align-items-center mt-3">
+          <app-quantity-selector 
+            [quantity]="quantity" 
+            (quantityChange)="onQuantityChange($event)"
+          ></app-quantity-selector>
 
-        <button class="btn btn-danger mt-3" (click)="addToCart()">Agregar al Carrito</button>
-        <button class="btn btn-danger mt-3 ml-2">
-          <i class="fa fa-heart"></i>
-        </button>
+          <button class="btn btn-danger ms-3" (click)="addToCart()">Agregar al Carrito</button>
+          <button class="btn btn-danger ms-2">
+            <i class="fa fa-heart"></i>
+          </button>
+        </div>
+
       </div>
     </div>
 
+    <!-- Product Details and Ratings -->
     <div class="mt-5">
       <ul class="nav nav-tabs">
         <li class="nav-item">

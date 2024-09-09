@@ -10,7 +10,7 @@ export class ProductDetailPageComponent implements OnInit {
   activeTab = 'details';
 
   product = {
-    name: 'Canasta lavandería con tapa Mimbre 38x27x47cm',
+    name: 'Canasta lavandería 38x27x47cm',
     description: 'Canasta de mimbre color café con manta y tapa, ideal para guardar artículos o ropa sucia',
     price: 9800.0,
     availability: 'Disponible',
