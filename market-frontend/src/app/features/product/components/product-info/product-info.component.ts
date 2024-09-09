@@ -8,7 +8,7 @@ import { Component, Input } from '@angular/core';
     <div class="mb-3">
       <i *ngFor="let star of [1,2,3,4,5]" class="fa fa-star"
          [class.text-warning]="star <= product.rating"></i>
-      <span class="ml-2 text-muted">{{product.numReviews}} reviews</span>
+      <span class="ms-4 text-muted">{{product.numReviews}} Calificaciones</span>
     </div>
 
     <p>{{product.description}}</p>
@@ -16,7 +16,7 @@ import { Component, Input } from '@angular/core';
 
     <p class="h3">{{product.price | currency}}</p>
 
-    <p>Availability: <span class="text-success">{{product.availability}}</span></p>
+    <p>Disponibilidad: <span class="text-success">{{product.availability}}</span></p>
     <p>SKU: {{product.sku}}</p>
   `,
   styles: []

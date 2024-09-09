@@ -12,6 +12,7 @@ import { ProductImagesComponent } from './components/product-images/product-imag
 import { ProductInfoComponent } from './components/product-info/product-info.component';
 import { ProductDetailsTabComponent } from './components/product-details-tab/product-details-tab.component';
 import { ProductRatingsTabComponent } from './components/product-ratings-tab/product-ratings-tab.component';
+import { QuantitySelectorComponent } from './components/quantity-selector/quantity-selector.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { ProductRatingsTabComponent } from './components/product-ratings-tab/pro
     ProductImagesComponent,
     ProductInfoComponent,
     ProductDetailsTabComponent,
-    ProductRatingsTabComponent
+    ProductRatingsTabComponent,
+    QuantitySelectorComponent
   ],
   imports: [
     CommonModule,

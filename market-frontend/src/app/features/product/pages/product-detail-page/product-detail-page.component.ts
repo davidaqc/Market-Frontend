@@ -11,20 +11,12 @@ import { Component, OnInit } from '@angular/core';
         <div class="col-md-6">
           <app-product-info [product]="product"></app-product-info>
           
-          <div class="form-group mt-4">
-            <label for="quantity">Quantity:</label>
-            <div class="input-group" style="max-width: 150px;">
-              <div class="input-group-prepend">
-                <button class="btn btn-outline-secondary" type="button" (click)="decreaseQuantity()">-</button>
-              </div>
-              <input type="text" id="quantity" class="form-control text-center" [value]="quantity">
-              <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button" (click)="increaseQuantity()">+</button>
-              </div>
-            </div>
-          </div>
+          <app-quantity-selector 
+            [quantity]="quantity" 
+            (quantityChange)="onQuantityChange($event)"
+          ></app-quantity-selector>
 
-          <button class="btn btn-danger mt-3" (click)="addToCart()">Add to Cart</button>
+          <button class="btn btn-danger mt-3" (click)="addToCart()">Agregar al Carrito</button>
           <button class="btn btn-danger mt-3 ml-2">
             <i class="fa fa-heart"></i>
           </button>
@@ -105,12 +97,8 @@ export class ProductDetailPageComponent implements OnInit {
     this.product.mainImage = newImage;
   }
 
-  decreaseQuantity(): void {
-    if (this.quantity > 1) this.quantity--;
-  }
-
-  increaseQuantity(): void {
-    this.quantity++;
+  onQuantityChange(newQuantity: number): void {
+    this.quantity = newQuantity;
   }
 
   addToCart(): void {
