@@ -14,9 +14,9 @@ import { Component, Input } from '@angular/core';
     <p>{{product.description}}</p>
     <hr>
 
-    <p class="h3">{{product.price | currency}}</p>
+    <p class="h3 mb-3">{{product.price | currency}}</p>
 
-    <p>Disponibilidad: <span class="text-success">{{product.availability}}</span></p>
+    <p class="mb-0">Disponibilidad: <span class="text-success">{{product.availability}}</span></p>
     <p>SKU#: {{product.sku}}</p>
   `,
   styles: []

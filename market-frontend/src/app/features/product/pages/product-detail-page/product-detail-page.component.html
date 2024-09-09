@@ -1,32 +1,30 @@
 <div class="container-fluid container-md">
-
     <app-breadcrumb [items]="breadcrumbItems"></app-breadcrumb>
 
     <div class="row">
-
+      
       <!-- Product Images -->
       <div class="col-md-5 mb-4">
         <app-product-images [product]="product"></app-product-images>
       </div>
-
       <div class="col-md-7">
 
         <!-- Product Info -->
         <app-product-info [product]="product"></app-product-info>
-        
+
         <!-- Quantity selector, Add to cart and Add to wishlist buttons -->
-        <div class="d-flex align-items-center mt-3">
+        <div class="d-flex flex-column flex-sm-row align-items-start mt-3">
           <app-quantity-selector 
             [quantity]="quantity" 
             (quantityChange)="onQuantityChange($event)"
           ></app-quantity-selector>
-
-          <button class="btn btn-danger ms-3" (click)="addToCart()">Agregar al Carrito</button>
-          <button class="btn btn-danger ms-2">
-            <i class="fa fa-heart"></i>
-          </button>
-        </div>
-
+          <div class="d-flex flex-row mt-2 mt-sm-0 ms-sm-3">
+            <button class="btn btn-danger me-2" (click)="addToCart()">Agregar al Carrito</button>
+            <button class="btn btn-danger">
+              <i class="fa fa-heart"></i>
+            </button>
+          </div>
+        </div>        
       </div>
     </div>
 
@@ -41,7 +39,7 @@
         </li>
       </ul>
 
-      <div class="tab-content mt-3 px-5">
+      <div class="tab-content mt-3 px-3">
         <div *ngIf="activeTab === 'details'">
           <app-product-details-tab [product]="product"></app-product-details-tab>
         </div>
