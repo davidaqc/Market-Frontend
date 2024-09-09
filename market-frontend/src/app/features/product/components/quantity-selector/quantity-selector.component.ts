@@ -4,7 +4,6 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   selector: 'app-quantity-selector',
   template: `
     <div class="form-group">
-      <label for="quantity">{{ label }}:</label>
       <div class="input-group" style="max-width: 150px;">
         <div class="input-group-prepend">
           <button class="btn btn-outline-secondary" type="button" (click)="decrease()">-</button>
@@ -20,7 +19,6 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class QuantitySelectorComponent {
   @Input() quantity: number = 1;
-  @Input() label: string = 'Quantity';
   @Output() quantityChange = new EventEmitter<number>();
 
   decrease(): void {

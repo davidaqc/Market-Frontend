@@ -1,0 +1,43 @@
+<div class="container-fluid container-md">
+
+    <app-breadcrumb [items]="breadcrumbItems"></app-breadcrumb>
+
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <app-product-images [product]="product" (changeMainImage)="changeMainImage($event)"></app-product-images>
+      </div>
+      <div class="col-md-6">
+        <app-product-info [product]="product"></app-product-info>
+        
+        <app-quantity-selector 
+          [quantity]="quantity" 
+          (quantityChange)="onQuantityChange($event)"
+        ></app-quantity-selector>
+
+        <button class="btn btn-danger mt-3" (click)="addToCart()">Agregar al Carrito</button>
+        <button class="btn btn-danger mt-3 ml-2">
+          <i class="fa fa-heart"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="mt-5">
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link" [class.active]="activeTab === 'details'" (click)="activeTab = 'details'">Detalles de producto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [class.active]="activeTab === 'ratings'" (click)="activeTab = 'ratings'">Calificaciones</a>
+        </li>
+      </ul>
+
+      <div class="tab-content mt-3 px-5">
+        <div *ngIf="activeTab === 'details'">
+          <app-product-details-tab [product]="product"></app-product-details-tab>
+        </div>
+        <div *ngIf="activeTab === 'ratings'">
+          <app-product-ratings-tab [product]="product"></app-product-ratings-tab>
+        </div>
+      </div>
+    </div>
+</div>

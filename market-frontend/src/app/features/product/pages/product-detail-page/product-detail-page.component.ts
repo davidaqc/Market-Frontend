@@ -2,60 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-product-detail-page',
-  template: `
-    <div class="container-fluid container-md mt-5">
-      <div class="row">
-        <div class="col-md-6 mb-4">
-          <app-product-images [product]="product" (changeMainImage)="changeMainImage($event)"></app-product-images>
-        </div>
-        <div class="col-md-6">
-          <app-product-info [product]="product"></app-product-info>
-          
-          <app-quantity-selector 
-            [quantity]="quantity" 
-            (quantityChange)="onQuantityChange($event)"
-          ></app-quantity-selector>
-
-          <button class="btn btn-danger mt-3" (click)="addToCart()">Agregar al Carrito</button>
-          <button class="btn btn-danger mt-3 ml-2">
-            <i class="fa fa-heart"></i>
-          </button>
-        </div>
-      </div>
-
-      <div class="mt-5">
-        <ul class="nav nav-tabs">
-          <li class="nav-item">
-            <a class="nav-link" [class.active]="activeTab === 'details'" (click)="activeTab = 'details'">Detalles de producto</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" [class.active]="activeTab === 'ratings'" (click)="activeTab = 'ratings'">Calificaciones</a>
-          </li>
-        </ul>
-
-        <div class="tab-content mt-3 px-5">
-          <div *ngIf="activeTab === 'details'">
-            <app-product-details-tab [product]="product"></app-product-details-tab>
-          </div>
-          <div *ngIf="activeTab === 'ratings'">
-            <app-product-ratings-tab [product]="product"></app-product-ratings-tab>
-          </div>
-        </div>
-      </div>
-    </div>
-  `,
-  styles: [`
-    .nav-tabs .nav-link.active {
-      color: var(--danger-color);
-      border-bottom: 2px solid var(--danger-color);
-    }
-    .nav-tabs .nav-link {
-      color: #495057;
-    }
-    .fa-star {
-      color: #ffc107;
-    }
-  `]
+  templateUrl: './product-detail-page.component.html',
+  styleUrls: ['./product-detail-page.component.scss']
 })
 export class ProductDetailPageComponent implements OnInit {
   quantity = 1;
@@ -88,6 +36,12 @@ export class ProductDetailPageComponent implements OnInit {
       { label: 'Especificaciones', value: 'Evitar contacto directo con el agua, para que no se pudra' },
     ]
   };
+
+  // Breadcrumb Component variables
+  breadcrumbItems = [
+    {label: 'Hogar', url: '/product/product-detail'},
+    {label: 'Adornos y decoración', url: '/product/product-detail'}
+  ];
 
   constructor() {}
 
