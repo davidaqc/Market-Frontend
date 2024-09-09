@@ -9,10 +9,25 @@ import { Component, OnInit } from '@angular/core';
           <app-product-images [product]="product" (changeMainImage)="changeMainImage($event)"></app-product-images>
         </div>
         <div class="col-md-6">
-          <app-product-info [product]="product" [quantity]="quantity"
-                            (decreaseQuantity)="decreaseQuantity()"
-                            (increaseQuantity)="increaseQuantity()"
-                            (addToCart)="addToCart()"></app-product-info>
+          <app-product-info [product]="product"></app-product-info>
+          
+          <div class="form-group mt-4">
+            <label for="quantity">Quantity:</label>
+            <div class="input-group" style="max-width: 150px;">
+              <div class="input-group-prepend">
+                <button class="btn btn-outline-secondary" type="button" (click)="decreaseQuantity()">-</button>
+              </div>
+              <input type="text" id="quantity" class="form-control text-center" [value]="quantity">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" (click)="increaseQuantity()">+</button>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn-danger mt-3" (click)="addToCart()">Add to Cart</button>
+          <button class="btn btn-danger mt-3 ml-2">
+            <i class="fa fa-heart"></i>
+          </button>
         </div>
       </div>
 
